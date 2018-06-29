@@ -1,0 +1,95 @@
+/* 资讯 */
+.info1 ,.infoImg1{width: 700px;height: 400px;}
+.info2 ,.info3 ,.infoImg2 ,.infoImg3{width: 500px;height: 200px;}
+.description1{width: 700px;height: 400px;color: #fff;font-size: 30px;text-align: center;line-height: 400px;position: absolute;top:0;left: 0;background-color: rgba(97, 97, 97, 0.8);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);cursor: pointer;}
+.description2 ,.description3{width: 500px;height: 200px;color: #fff;font-size: 30px;text-align: center;line-height: 200px;position: absolute;top:0;left: 0;background-color: rgba(97, 97, 97, 0.8);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);cursor: pointer;}
+
+/* title公共样式 */
+.titleBox{padding: 20px 0;}
+.titLeftBox{height: 34px;margin-left: 10px;}
+.titName{color:#00c9e1;}
+
+.infoIcon{background: url("../../Image/informationCenter/informationIcon.png") no-repeat;background-size: 126px 32px;}
+.platformIcon{background: url("../../Image/informationCenter/platformIcon.png") no-repeat;background-size: 86px 31px;}
+.hotIcon{background: url("../../Image/informationCenter/popularIcon.png") no-repeat;background-size: 82px 35px;}
+
+/* 全部资讯 */
+.allInfoNotice{width: 780px;height: 917px;overflow: hidden;}
+.allHotPlatformInfo{margin-top: 30px;padding-bottom: 30px;}
+.allInfo{width: 780px;height: 1164px;background: #fff;overflow: hidden;}
+.allInfoLine{width: 100%;height: 2px;background: url("../../Image/informationCenter/allInfoLine.png") no-repeat center;background-size: 780px 2px;}
+.allInfoTitleUl{padding: 0 12px 20px;border-bottom: 1px dashed #bbb;}
+.allInfoTitleLi{font-size: 18px;padding:4px 6px;margin-right: 40px;cursor: pointer;}
+.allInfoNoticeImgLi{padding: 30px 12px;height: 150px;border-bottom: 1px dashed #bbb;}
+.allInfoNoticeImg{height: 150px;width: 300px;}
+.allInfoNoticeTitle{width: 400px;font-size: 16px;font-weight: bold;margin-bottom: 110px;padding-left: 20px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;cursor: pointer;}
+.allInfoNoticeTime{width: 436px;font-size: 15px;color: #999;padding-left: 20px;}
+.allInfoNoticeTime a{color: #999;}
+.allInfoNoticeTime a:hover{color: #00c9e1;}
+.allInfoBody .allInfoNotice{display: none;}
+.allInfoBody .cur{display: block;}
+
+.allInfoNoticeTextUl{height: 284px;padding: 0 12px;overflow: hidden;}
+.allInfoNoticeTextLi{margin: 20px 0;}
+.allInfoNoticeTextLi a{width: 340px;color: #333;font-size: 18px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.allInfoNoticeTextLi span{font-size: 15px;color: #999;}
+.allInfoNoticeTextLi a:hover{color: #00c9e1;margin-left: 1em;}
+.allInfoNoticeImgUl{height: 633px;overflow: hidden;}
+
+/* 分页按钮 */
+.paging{text-align: center;padding: 39px 0;}
+.paging a{height: 40px;line-height: 40px;border-radius: 5px;padding: 0 16px;display: inline-block;font-size: 18px;background: #ddd;color: #666;cursor: pointer;margin: 0 8px;}
+.paging a:hover{background: #00c9e1;color: #fff;}
+
+/* 选中 */
+.allInfoTitleUl .on{background: #00c9e1;color: #fff;border-radius: 4px;}
+
+/* 热门资讯 */
+.hotPlatformInfo{width: 400px;}
+.hotInfo{width: 400px;height: 664px;background: #fff;overflow: hidden;}
+.hotInfoUl{margin: 0 12px 0;}
+.hotInfoLi{margin-bottom: 20px;}
+.subActiveRankLi{float: left;width: 100%;margin: 10px 0;cursor: pointer;}
+.rankRight{width: 200px;}
+.rankImg{width: 78px;height: 78px;border-radius: 10px;}
+.rankNme{width: 160px;height: 21px;font-size: 16px;margin: 0 0 32px 15px;color: #494949;font-weight: 600;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;cursor: pointer;}
+.rankText{width: 160px;height: 21px;font-size: 14px;margin-left: 15px;color: #a1a1a1;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;cursor: pointer;}
+.hotInfoBtn a{display: block;width:76px;height:24px;line-height:24px;color:#ccc;font-size: 14px;text-align: center;border:1px solid #ccc;border-radius: 5px;}
+.hotInfoBtn a:hover{background: #00c9e1;color: #FFF;border: 1px solid #00c9e1;}
+.rankImg:hover{-webkit-transform: scale(1.1);}
+
+.hotInfoLine{width: 100%;height: 2px;background: url("../../Image/informationCenter/hotInfoLine.png") no-repeat center;background-size: 400px 2px;}
+
+/* 平台资讯 */
+.platformInfo{background: #fff;height: 476px;margin-top: 24px;overflow: hidden;}
+.platformInfoUl{text-align: center;}
+.platformInfoLi{height: 180px;margin-bottom: 20px;}
+.platformInfoLiImg{width: 360px;height: 180px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

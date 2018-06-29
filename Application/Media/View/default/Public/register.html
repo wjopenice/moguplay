@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>注册</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/register/index.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+    <!-- 公共头部 -->
+    <include file="Public/header" />
+
+    <!-- 注册内容 -->
+    <div class="tabMain container cf">
+
+        <!-- 左侧Tab切换 -->
+        <div class="tabItem fl">
+            <ul>
+                <li class="rightLine on">
+                    <a href="javascript:;">
+                        <i class="userIcon dib"></i>
+                        <span class="userName">用户名注册</span>
+                    </a>
+                </li>
+                <li class="rightLine">
+                    <a href="javascript:;">
+                        <i class="phoneIcon dib "></i>
+                        <span class="userName">手机号注册</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="loginIcon">
+                <p class="existingAccount">已有游戏账号？</p>
+                <a class="loginBtn dib" href="javascript:;">立即登录&gt;&gt;</a>
+            </div>
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="tabContent fl">
+            <form>
+                <div class="tapContent">
+                    <div class="tapBox">
+                        <p class="mode">您当前选择的是 <span class="userNameTitle">用户名注册</span> 的方式</p>
+                        <p class="notice">以下内容我们承诺您的安全信息，不会透露给第三方</p>
+                        <div class="common">
+                            <label for="userAccount">用户账号：</label>
+                            <input type="text" name="account" id="userAccount">
+                            <p class="remarks"><span class="star">*</span> 请输入 6-15 位由字母和数字组成 , 以字母开头</p>
+                            <span class="error"></span>
+
+                        </div>
+                        <div class="common">
+                            <label for="setPwd">设置密码：</label>
+                            <input type="password" name="password" id="setPwd">
+                            <p class="remarks"><span class="star">*</span> 请输入 6-15 位数字、字母组成</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="confirmPwd">确认密码：</label>
+                            <input type="password" name="repassword" id="confirmPwd">
+                            <p class="remarks"><span class="star">*</span> 请输入您的确认密码</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common verifyCode cf">
+                            <label class="dib fl" for="imgCode">&emsp;验证码：</label>
+                            <input type="text" name="verify" class="fl" id="imgCode">
+                            <img src="__MODULE__/Public/verify" alt="" id="imgVerify" class="imgCode dib fl">
+                            <p class="remarks"><span class="star">*</span> 请输入您的图形验证码</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="mailbox">常用邮箱：</label>
+                            <input type="text" name="email" id="mailbox">
+                            <p class="remarks"><span class="star"></span> 请输入常用邮箱，该邮箱可用于找回账号密码</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="illustrate">
+                            <p class="explain">根据2010年8月1日实施的《网络游戏管理暂行办法》，网络游戏用户需使用有效身份证件进行实名注册。为保证流畅游戏体验，</p>
+                            <p class="instruction">享受健康游戏生活，请广大游戏玩家尽快实名注册，且实名信息将不可更改。</p>
+                        </div>
+                        <div class="common">
+                            <label for="name">真实姓名：</label>
+                            <input type="text" name="truename" id="name">
+                            <p class="remarks"><span class="star">*</span> 请输入您的真实姓名</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="numberID">身份证号：</label>
+                            <input type="text" name="card" id="numberID">
+                            <p class="remarks"><span class="star">*</span> 请输入您的身份证号</p>
+                            <span class="error"></span>
+                        </div>
+                    </div>
+
+                    <div class="tapBox hide">
+                        <p class="mode">您当前选择的是 <span class="userNameTitle">手机号注册</span> 的方式</p>
+                        <p class="notice">以下内容我们承诺您的安全信息，不会透露给第三方</p>
+                        <div class="common verifyCode cf">
+                            <label class="dib fl" for="phone">&emsp;手机号：</label>
+                            <input type="text" maxlength="11" name="account" class="fl" id="phone">
+                            <input type="button" class="sendCode fl" id="sendCode" value="发送验证码" readonly="true">
+                            <p class="remarks"><span class="star">*</span> 请输入您的手机号</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="code">&emsp;验证码：</label>
+                            <input type="" name="vcode" id="code">
+                            <p class="remarks"><span class="star">*</span> 请输入您的短信验证码</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="setPassW">设置密码：</label>
+                            <input type="password" name="password" id="setPassW">
+                            <p class="remarks"><span class="star">*</span> 请输入6-30位数字、字母组成</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="commonMailbox">常用邮箱：</label>
+                            <input type="text" name="email" id="commonMailbox">
+                            <p class="remarks"><span class="star">&nbsp;</span>请输入常用邮箱，该邮箱可用于找回账号密码</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="illustrate">
+                            <p class="explain">根据2010年8月1日实施的《网络游戏管理暂行办法》，网络游戏用户需使用有效身份证件进行实名注册。为保证流畅游戏体验，</p>
+                            <p class="instruction">享受健康游戏生活，请广大游戏玩家尽快实名注册，且实名信息将不可更改。</p>
+                        </div>
+                        <div class="common">
+                            <label for="realName">真实姓名：</label>
+                            <input type="text" name="truename" id="realName">
+                            <p class="remarks"><span class="star">*</span>姓名不能为空</p>
+                            <span class="error"></span>
+                        </div>
+                        <div class="common">
+                            <label for="number">身份证号：</label>
+                            <input type="text" name="card" id="number">
+                            <p class="remarks"><span class="star">*</span>身份证号不能为空</p>
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="agreement active">
+                    <i class="selected"></i>
+                    <p><span class="agreementText">我已阅读并同意</span><a class="agreementText" href="javascript:;">《堡庆网络科技手游用户注册协议》</a></p>
+                </div>
+                <div class="errorMsg hide">密码错误</div>
+                <a class="immediatelyRegister" href="javascript:void(0);" id="btnReg">立即注册</a>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- 公共尾部 -->
+    <include file="Public/footer" />
+    
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/jquery.ext.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/register/index.js"></script>
+</body>
+</html>
+<script>
+    var verifyUrl = "{:U('Public/verify')}";
+    var user_registerUrl = "{:U('Member/user_register')}";
+    var telregisterUrl = "{:U('Member/telregister')}";
+    var loginUrl = "{:U('public/login')}";
+    var sendvcodeUrl = "__MODULE__"+'Member/telsvcode';
+    var verifyUrl = "{:U('Public/verify')}";
+
+</script>

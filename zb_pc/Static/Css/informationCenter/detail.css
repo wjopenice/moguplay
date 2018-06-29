@@ -1,0 +1,54 @@
+/* 面包屑 */
+.customerCrumbs{padding: 34px 0 24px;font-size: 16px;color: #666;}
+.customerCrumbs a{font-size: 16px;color: #666;}
+
+/* 资讯文章 */
+.infoDetail{padding-bottom: 40px;}
+.infoArticle{width: 780px;background: #fff;}
+.infoDetailLine{width: 100%;height: 2px;background: url("../../Image/informationCenter/allInfoLine.png") no-repeat center;background-size: 780px 2px;}
+.ArticleTitle{text-align: center;padding: 30px 0;border-bottom: 1px dashed #bbb;}
+.title{font-size: 22px;font-weight: bold;letter-spacing:2px;width: 700px;margin-bottom: 10px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.time{font-size: 16px;color: #a7a7a7;}
+.ArticleContent{min-height: 601px;padding: 20px 25px 40px;}
+.content{line-height: 28px;text-indent: 2em;}
+
+/* title公共样式 */
+.titleBox{padding: 20px 0;}
+.titLeftBox{height: 34px;margin-left: 10px;}
+.titName{color:#00c9e1;}
+
+.hotGiftIcon{background: url("../../Image/informationCenter/hotGiftIcon.png") no-repeat;background-size: 83px 35px;}
+.hotGameIcon{background: url("../../Image/informationCenter/hotGameIcon.png") no-repeat;background-size: 82px 35px;}
+
+/* 最热礼包 */
+.hot{width: 400px;}
+.hotGift{width: 400px;height: 468px;background: #fff;margin-bottom: 20px;overflow: hidden;}
+.hotInfoLine{width: 100%;height: 2px;background: url("../../Image/informationCenter/hotInfoLine.png") no-repeat center;background-size: 400px 2px;}
+.activeRankBox{width: 419px;padding-bottom: 20px;}
+.activeRankUl{margin: 0 12px 0;}
+.rankInfo{width: 100%;}
+.subRankLi{float: left;width: 100%;margin-bottom: 20px;cursor: pointer;}
+.rankRight{width: 200px;}
+.rankImg{width: 78px;height: 78px;border-radius: 10px;}
+.rankImg:hover{-webkit-transform: scale(1.1);}
+.rankNme{width: 180px;height: 21px;font-size: 16px;margin-left: 15px;color: #494949;font-weight: 600;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.rankText{width: 180px;height: 57px;font-size: 14px;margin-left: 15px;color: #a1a1a1;overflow: hidden;}
+.btnRank{width:76px;height:24px;line-height:24px;color:#00c9e1;font-size: 12px;text-align: center;border:1px solid #00c9e1;border-radius: 5px;}
+.btnRank:hover{background: #00c9e1;color: #FFF;border: 1px solid #00c9e1;}
+.received{color: #ccc;border: 1px solid #ccc;}
+.received:hover{color: #ccc;border: 1px solid #ccc;background: #fff;}
+
+/* 热门游戏 */
+.hotGame{width:400px;height: 300px;background: #fff;overflow: hidden;}
+.subLinkGame{display: block;float: left;width: 88px;height: 30px;margin: 0 10px;font-size:16px;line-height: 30px;text-align: center;}
+.subLinkGame.active{background: #6BCEF6;color: #FFF;border-radius: 5px;font-weight: bold;}
+.allGameContent{margin: 0 12px;}
+.subAllGame{width: 188px;height:82px;margin-bottom: 30px;}
+.gameImg{width: 78px;height: 78px;}
+.gameImg:hover{-webkit-transform: scale(1.1);}
+.gameContent{margin-left: 10px;width: 100px;}
+.subGameName{font-size: 16px;color:#333;width: 96px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.subGameTypeBox{height:33px;line-height:33px;font-size: 12px;color: #999;width: 96px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.operateBtnBox a{display: block;float: left;width: 76px;height: 26px;font-size:12px;line-height: 26px;text-align:center;border:1px solid #CCC;color: #CCC;border-radius: 4px;}
+.operateBtnBox a:hover{background: #00c9e1;color: #FFF;border:1px solid #00c9e1;}
+.btnDownLoad{margin-right: 10px;}

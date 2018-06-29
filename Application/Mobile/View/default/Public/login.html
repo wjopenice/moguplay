@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>登录</title>
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/login/index.css">
+</head>
+<body class="mHome bg_white">
+
+    <!--  Logo   -->
+    <div class="logo">
+        <img class="logoImg" src="__PUBLIC__/Mobile/images/index/logo.png" />
+        <p class="logoChName">手上科技</p>
+        <p class="logoEnName">Shoushang technology</p>
+    </div>
+
+    <!--  表单   -->
+    <form action="" class="formBox cf">
+        <input type="hidden" id="url" value="{:U('Member/login')}" />
+        <div id="account" class="formBoxWrap fl cf">
+            <p class="formName"><img src="__PUBLIC__/Mobile/images/login/account.png"/></p>
+            <input class="" type="text" placeholder="请输入账号" maxlength="20">
+        </div>
+        <div id="pwd" class="formBoxWrap fl cf">
+            <p class="formName"><img src="__PUBLIC__/Mobile/images/login/pwd.png"/></p>
+            <input class="" type="password" placeholder="请输入密码" maxlength="20">
+        </div>
+        <div class="btn-loginBox">
+            <a href="javascript:void(0)" class="btnLogin" id="btnLogin">登录</a>
+        </div>
+        <div class="operation cf">
+            <a href="{:U('Public/register')}" class="btn-register fl">新用户注册</a>
+            <a href="{:U('Index/wjmm')}" class="btn-forgetPwd fr">忘记密码</a>
+        </div>
+    </form>
+
+<script src="__JS__/zepto.min.js"></script>
+<script src="__JS__/sm.min.js"></script>
+<script src="__JS__/main.js"></script>
+<script src="__JS__/login/index.js"></script>
+</body>
+</html>

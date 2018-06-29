@@ -1,0 +1,31 @@
+/*       商城Banner          */
+.mallBanner,.mallBanner img{width: 100%;height: 8rem;}
+.mallNavBar{margin: .7rem 0;background: #FFF;}
+
+/*      小导航        */
+.mallNavBar{width: 100%;}
+.navLink{display: block;float:left;width: 100%;height: 100%;}
+.subNav{width: 33.3%;}
+.subNav .icon{display: block;width: 2rem;height: 2rem;margin:.7rem 2rem;}
+.navName{width: 100%;font-size:.8rem;margin:-.5rem 0 .8rem 0;text-align: center;}
+.myScore .icon{background: url("../../images/mall/myScore.png") no-repeat;background-size: 2rem 2rem;}
+.myChange .icon{background: url("../../images/mall/myChange.png") no-repeat;background-size: 2rem 2rem;}
+.luckDraw .icon{background: url("../../images/mall/draw.png") no-repeat;background-size: 2rem 2rem;}
+
+/*   tab栏     */
+.mallTab{width: 100%;padding:0 1rem;background: #FFF;border-bottom: 1px solid #CCC;}
+.subTab{display: block;float: left;width: 25%;height:3rem;font-size:.8rem;line-height:3rem;text-align: center;}
+.subTab.active{border-bottom: 1px solid #00C9E1;}
+
+/*   tab内容栏     */
+.mallTabContentBox{margin-bottom: 4rem;}
+.choiceBox{background: #FFF;}
+.eachChoice{float:left;width: 50%;padding:1rem 0.7rem 1rem 0.7rem;margin-right:-1px; margin-bottom:-1px;border-right: 1px solid #F4F4F4;border-bottom: 1px solid #F4F4F4;}
+.choiceImg{display: block;width: 10rem;height: 5rem;}
+.choiceName{width:100%;font-size: .8rem;height: 1.5rem;line-height: 1.5rem;font-weight: bold;}
+.choiceScore{width:100%;font-size: .7rem;}
+.btnChange{display: block;width: 100%;height: 1.5rem;margin-top:.3rem;line-height: 1.5rem;text-align: center;    background: linear-gradient(to right, #01c9e1, #8efce1);color: #FFF;border-radius: .3rem;}
+.noGoodsIcon,.noGiftIcon{display: block;width: 8rem;height: 7rem;margin:3rem auto 1rem auto;}
+.noGoodsIn,.noGiftIn{width: 11rem;height: 2rem;color:#999;line-height: 2rem;margin:0 auto 2rem auto;text-align: center;}
+.noGoodsIcon{background: url("../../images/mall/noMatter.png") no-repeat;background-size: 8rem 7rem;}
+.noGiftIcon{background: url("../../images/mall/noGift.png") no-repeat;background-size: 8rem 7rem;}

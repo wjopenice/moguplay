@@ -1,0 +1,53 @@
+/*    公共的颜色风格      */
+.guideUl .on .problem{background: #00C9E1;border:1px solid #00C9E1;}
+.guideUl .on .line{border-bottom: 2px solid #00C9E1;}
+.guideUl .on .circular{background: #00C9E1;}
+.tapBox h4{border-left: 10px solid #00C9E1;}
+.allProblem{border-top: 2px solid #00C9E1;}
+
+
+/* 客服中心详情content */
+.customerContent{background: #f4f4f4;}
+
+/* 面包屑 */
+.customerCrumbs{padding: 30px 0;font-size: 14px;color: #666;}
+.customerCrumbs a{font-size: 14px;color: #666;}
+
+/* 左侧导航 */
+.guideUl{width: 240px;height: 600px;background: #fff;}
+.guideUl .problem{color: #999;font-size: 16px;width: 170px;height: 38px;line-height: 38px;border: 1px solid #dcdcdc;border-radius: 16px;text-align: center;margin-left: 10px;margin-top: 20px;cursor: pointer;}
+.guideIcon{background: url("../../Image/customerService/guide.png") no-repeat;position: absolute;right: 26px;top: 1px;width: 12px;height: 600px;}
+
+/* 线和圆形 */
+.line{width: 24px;position: absolute;right: 35px;top: 39px;}
+.circular{width: 16px;height: 16px;border-radius: 50%;position: absolute;right: 24px;top: 32px;z-index: 9999;}
+
+/* 选中 */
+.guideUl .on .problem{color: #fff;}
+
+/* tap */
+.tap{width: 950px;margin-left: 10px;background: #fff;-moz-box-shadow:0 0 9px #dcdcdc; -webkit-box-shadow:0 0 9px #dcdcdc; box-shadow:0 0 9px #dcdcdc;margin-bottom: 50px;}
+.tapBox{padding: 30px 0 75px 20px;}
+.tapBox h4{color: #666;padding-left: 10px;margin-bottom: 10px;}
+.problemText{border-bottom: 1px solid #f4f4f4;padding: 26px 24px 20px;}
+.problemTextTitle{font-weight: 600;font-size: 16px;color: #333;}
+.answer{font-size: 14px;color: #666;padding: 20px 0 12px 30px;}
+.tapBox{display: none;}
+.tapBox:first-Child{display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

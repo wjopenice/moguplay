@@ -1,0 +1,127 @@
+[ 2018-04-16T16:05:51+08:00 ] 127.0.0.1 /moguplay/index.php?s=/Android/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0090s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tab_appimage` [ RunTime:0.0100s ]
+NOTIC: [2] Missing argument 3 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 17 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 4 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 17 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 17 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: size E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined index: limit E:\phpStudy\WWW\moguplay\ThinkPHP\Library\Think\Db\Driver.class.php 第 923 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 1 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,20   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2873 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2851 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1428 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2863 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1268 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1140 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2437 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1133 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 400 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 399 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 209 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 392 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 197 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 183 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 342 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 152 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 4 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 19 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 19 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 3 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,9   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2815 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2746 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2790 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2759 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2805 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2825 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 388 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 378 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 382 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 377 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 386 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 366 LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] Missing argument 3 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 21 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 4 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 21 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 21 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: size E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined index: limit E:\phpStudy\WWW\moguplay\ThinkPHP\Library\Think\Db\Driver.class.php 第 923 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 2 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,20   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1500 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2503 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1342 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 332 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2469 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1051 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2773 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2323 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 187 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 333 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 206 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 34 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 344 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 270 LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 387 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 327 LIMIT 1   [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 4 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 23 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 23 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `cp_name` = 'cps' AND `game_status` = 1 ORDER BY app_sort LIMIT 0,6   [ RunTime:0.0210s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1568 LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1887 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1894 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1935 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1934 LIMIT 1   [ RunTime:0.0270s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1945 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 244 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 275 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 276 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 277 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 278 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 279 LIMIT 1   [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 4 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 25 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Android\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Android\Controller\IndexController.class.php on line 25 and defined E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Android\Model\GameModel.class.php 第 127 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `cp_name` <> 'cps' AND `game_status` = 1 ORDER BY app_sort LIMIT 0,6   [ RunTime:0.0150s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 707 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1559 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 578 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 339 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 423 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 437 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 15 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 29 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 33 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 39 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 49 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 54 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tab_appimage` WHERE `status` = 1 AND `pos_id` = 1 ORDER BY sort  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2832 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2833 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2834 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2835 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2933 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2837 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tab_appimage` WHERE `status` = 1 AND `pos_id` = 2 ORDER BY sort  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2838 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tab_appimage` WHERE `status` = 1 AND `pos_id` = 3 ORDER BY sort  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2986 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tab_appimage` WHERE `status` = 1 AND `pos_id` = 4 ORDER BY sort  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2840 LIMIT 1   [ RunTime:0.0090s ]
+

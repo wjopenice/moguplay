@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>首页</title>
+    <link rel="stylesheet" href="./Static/Css/sm.min.css">
+    <link rel="stylesheet" href="./Static/Css/sm-extend.min.css">
+    <link rel="stylesheet" href="./Static/Css/public.css">
+    <link rel="stylesheet" href="./Static/Css/index/index.css">
+</head>
+<body class="mHome">
+
+    <!--  加载层   -->
+    <div id="loader">
+        <div class="loaderInner">
+            <img src="./Static/images/index/logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="page-group">
+
+        <!--   导航栏   -->
+        <div class="topBar cf">
+            <div class="logoLeft fl cf"><img class="logoImg fl" src="./Static/images/index/logo.png"/><p class="fl">手上科技</p></div>
+            <div class="logoRight fr">
+                <!--  未登录   -->
+                <div class="status-unLogin" style="display:none;">
+                    <a class="btn-login" href="">登录</a>
+                    <a class="btn-register" href="">注册</a>
+                </div>
+
+                <!--  已登录  -->
+                <div class="status-login cf">
+                    <img class="headImg fl" onerror="javascript:this.src='./Static/images/personalCenter/head-portrait.png'"/>
+                    <p class="headName fl">刁薇笑</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  banner  -->
+        <div class="swiper-container" data-space-between='10'>
+            <div class="swiper-wrapper slide-banner_uc">
+                <div class="swiper-slide"><a href="" class="external"><img alt="" src="./Static/images/index/banner.png" onerror="this.onerror = null; this.src ='../Static/images/personalCenter/personal-bg.png';"></a></div>
+                <div class="swiper-slide"><a href="" class="external"><img alt="" src="./Static/images/index/banner.png" onerror="this.onerror = null; this.src ='../Static/images/personalCenter/personal-bg.png';"></a></div>
+                <div class="swiper-slide"><a href="" class="external"><img alt="" src="./Static/images/index/banner.png" onerror="this.onerror = null; this.src ='../Static/images/personalCenter/personal-bg.png';"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!--  小导航  -->
+        <div class="subNavBox container">
+            <ul class="cf">
+                <li class="subNav fl giftLi"><a href="javascript:void(0)" class="cf"><img class="icon" src="Static/images/index/giftIcon.png" alt=""><p class="navName fl">礼包</p></a></li>
+                <li class="subNav fl infoLi"><a href="javascript:void(0)" class="cf"><img class="icon" src="Static/images/index/infoIcon.png" alt=""><p class="navName fl">资讯</p></a></li>
+                <li class="subNav fl searchLi"><a href="javascript:void(0)" class="cf"><img class="icon" src="Static/images/index/searchIcon.png" alt=""><p class="navName fl">搜索</p></a></li>
+                <li class="subNav fl allLi"><a href="javascript:void(0)" class="cf"><img class="icon" src="Static/images/index/allIcon.png" alt=""><p class="navName fl">全部</p></a></li>
+            </ul>
+        </div>
+
+        <!--  最近在玩   -->
+        <div class="playBox container">
+            <ul class="cf">
+                <li class="subPlay fl playFirst">最近在玩</li>
+                <li class="subPlay fl">
+                    <img src="./Static/images/index/hot.png" alt="" class="playIcon">
+                    <p class="fl playName">封神英雄</p>
+                </li>
+                <li class="subPlay fl">
+                    <img src="./Static/images/index/hot.png" alt="" class="playIcon">
+                    <p class="fl playName">封神英雄榜转</p>
+                </li>
+                <li class="subPlay fl">
+                    <img src="./Static/images/index/hot.png" alt="" class="playIcon">
+                    <p class="fl playName">封神英雄</p>
+                </li>
+                <li class="subPlay fl">
+                    <img src="./Static/images/index/hot.png" alt="" class="playIcon">
+                    <p class="fl playName">封神英雄</p>
+                </li>
+            </ul>
+        </div>
+
+        <!--  新上架游戏  -->
+        <div class="newestGame">
+            <div class="tit cf"><i class="titIcon fl"></i><p class="titName fl">新上架游戏</p><i class="titIcon fl"></i></div>
+            <div class="newestGameContent">
+                <ul class="cf">
+                    <li class="subRankGame fl cf">
+                        <i class="icon fl rank1">1</i>
+                        <img class="newestImg fl"  src="./Static/images/index/hot.png"/>
+                        <div class="newestDetail fl cf">
+                            <p class="fl cf"><span class="newestName fl">封神英雄</span><span class="tag fl">热门</span><span class="tag fl">新游</span></p>
+                            <p class="fl newestType">角色扮演</p>
+                            <p class="fl num">816255人玩过</p>
+                        </div>
+                    </li>
+                    <li class="subRankGame fl cf">
+                        <i class="icon fl rank2">2</i>
+                        <img class="newestImg fl"  src="./Static/images/index/hot.png"/>
+                        <div class="newestDetail fl cf">
+                            <p class="fl cf"><span class="newestName fl">封神英雄</span><span class="tag fl">热门</span><span class="tag fl">新游</span></p>
+                            <p class="fl newestType">角色扮演</p>
+                            <p class="fl num played">816255人玩过</p>
+                        </div>
+                    </li>
+                    <li class="subRankGame fl cf">
+                        <i class="icon fl rank3">3</i>
+                        <img class="newestImg fl"  src="./Static/images/index/hot.png"/>
+                        <div class="newestDetail fl cf">
+                            <p class="fl cf"><span class="newestName fl">封神英雄</span><span class="tag fl">热门</span><span class="tag fl">新游</span></p>
+                            <p class="fl newestType">角色扮演</p>
+                            <p class="fl num playColor">816255人玩过</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--   精品热门     -->
+        <div class="hotBox">
+            <div class="tit cf"><i class="titIcon fl"></i><p class="titName fl">精品热门</p><i class="titIcon fl"></i></div>
+            <div class="hotContent container">
+                <ul class="cf">
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                    <li class="subHot fl">
+                        <img src="./Static/images/index/hot.png" alt="" class="hotImg">
+                        <p class="hotName">封神英雄榜</p>
+                        <a href="javascript:void(0)" class="enter">进入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--  全部游戏    -->
+        <div class="allGamesBox">
+            <div class="tit cf"><i class="titIcon fl"></i><p class="titName fl">全部游戏</p><i class="titIcon fl"></i></div>
+            <div class="allGamesContent">
+                <ul class="cf">
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                    <li class="subAllGames fl cf">
+                        <div class="subAllTextLeft fl">
+                            <img src="./Static/images/index/hot.png" alt="" class="allGameImg fl">
+                            <div class="gameSome fl cf">
+                                <p class="fl gameNameBox cf"><span class="gameName fl">封神英雄</span><span class="gameTag fl">热门</span><span class="gameTag fl">英雄</span></p>
+                                <p class="fl gameType">角色扮演</p>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="btnGameEnter fr">进入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--  到底   -->
+        <div class="foot">已经到底了</div>
+
+        <!--   底部导航栏   -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external footTap-game active" href="./index.html">
+                <span class="icon"></span>
+                <span class="tab-label">游戏</span>
+            </a>
+            <a class="tab-item external footTap-mall" href="./View/information.html">
+                <span class="icon"></span>
+                <span class="tab-label">商城</span>
+            </a>
+            <a class="tab-item external footTap-center" href="View/personalCenter.html">
+                <span class="icon"></span>
+                <span class="tab-label">我</span>
+            </a>
+        </nav>
+    </div>
+
+<script src="./Static/Js/zepto.min.js"></script>
+<script src="./Static/Js/sm.min.js"></script>
+<script src="./Static/Js/sm-extend.min.js"></script>
+<script src="./Static/Js/main.js"></script>
+<script src="./Static/Js/index/index.js"></script>
+</body>
+</html>

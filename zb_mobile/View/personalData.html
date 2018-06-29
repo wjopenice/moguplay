@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>个人资料</title>
+    <link rel="stylesheet" href="../Static/Css/sm.min.css">
+    <link rel="stylesheet" href="../Static/Css/sm-extend.min.css">
+    <link rel="stylesheet" href="../Static/Css/public.css">
+    <link rel="stylesheet" href="../Static/Css/personalData/index.css">
+</head>
+<body class="mHome">
+
+    <!--  加载层   -->
+    <div id="loader">
+        <div class="loaderInner">
+            <img src="./Static/images/index/logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="page-group">
+        <!--   个人资料    -->
+        <div class="personalDataBoxWrap">
+            <div class="subPersonalBox cf headBox">
+                <p class="personalName fl">头像</p>
+                <a href="javascript:void(0)" class="fr cf changeBox" id="changeBox">
+                    <img src="../Static/images/personalData/head.png" alt="" class="centerHeadImg fr" id="centerHeadImg">
+                    <input type="file" hidefocus="true" id="fileUpLoad" accept="image/*" name="fileUpLoad" class="fileUpLoad">
+                    <span class="fr clickChange">点击更换</span>
+                </a>
+            </div>
+            <div class="subPersonalBox cf baseInfoBox">
+                <p class="personalName fl">账号</p>
+                <p class="fr">qq.n7199957</p>
+            </div>
+            <div class="subPersonalBox cf baseInfoBox">
+                <p class="personalName fl">昵称</p>
+                <input type="text" class="fr nickNameInput" placeholder="请输入您的昵称"/>
+            </div>
+            <div class="subPersonalBox cf baseInfoBox">
+                <p class="personalName fl">性别</p>
+                <p class="fr sexChoose"><span class="sex">女</span> <i class="moreIcon"></i></p>
+            </div>
+            <div class="subPersonalBox cf realNameBox">
+                <p class="personalName fl">真实姓名</p>
+                <input type="text" placeholder="点这里填写真实姓名" class="fr realName">
+            </div>
+            <div class="subPersonalBox cf cardIdBox">
+                <p class="personalName fl">身份证号码</p>
+                <input type="text" placeholder="点这里填写身份证号码" class="fr cardId">
+            </div>
+            <a href="javascript:void(0)" class="btnSave">保存</a>
+        </div>
+    </div>
+
+<script src="../Static/Js/personalData/jquery.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="../Static/Js/zepto.min.js"></script>
+<script src="../Static/Js/sm.min.js"></script>
+<script src="../Static/Js/main.js"></script>
+<script src="../Static/Js/personalData/jquery.ui.widget.js"></script>
+<script src="../Static/Js/personalData/jquery.fileupload.js"></script>
+<script src="../Static/Js/personalData/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>我的礼包</title>
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/myGifts/index.css">
+</head>
+<body class="mHome">
+    <div class="page-group">
+        <!--  标题  -->
+        <div class="giftTit">
+            <p class="giftTitName">我的礼包</p>
+        </div>
+
+        <if condition="$count eq 0">
+            <!--  游戏礼包为空   -->
+            <div class="giftNull ">
+                <p class="aLanguage">骚年，你还没有领取游戏礼包，赶快领取吧！</p>
+                <img class="no-Img" src="__PUBLIC__/Mobile/images/giftsDetails/no-game.png" alt="">
+            </div>
+        <else/>
+            <div class="gameBoxWrap">
+                <!--  游戏礼包 " -->
+                <volist name="gifts" id="vo" >
+                    <div class="gameBox cf">
+                        <div class="gameTit fl cf">
+                            <img class="gameImg fl" src="__ROOT__{$vo.icon|get_cover='path'}">
+                            <p class="gameName fl">{$vo.game_name}</p>
+                        </div>
+                        <!--   游戏的礼包   -->
+                        <div class="eachGift fl cf">
+                            <p class="giftName fl">{$vo.giftbag_name}</p>
+                            <p class="giftExplain fl">{$vo.desribe}</p>
+                            <p class="receiveTime fr">领取时间：{$vo.create_time|date="Y-m-d",###}</p>
+                        </div>
+                    </div>
+
+                </volist>
+            </div>
+        </if>
+    </div>
+
+    <!--   底部导航栏   -->
+    <nav class="bar bar-tab">
+        <a class="tab-item external footTap-game" href="{:U('Index/index')}">
+            <span class="icon"></span>
+            <span class="tab-label">游戏</span>
+        </a>
+        <a class="tab-item external footTap-info" href="{:U('Category/zixun')}">
+            <span class="icon"></span>
+            <span class="tab-label">资讯</span>
+        </a>
+        <a class="tab-item external footTap-center active" href="{:U('Member/personalcenter')}">
+            <span class="icon"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </nav>
+    
+
+<script src="__JS__/zepto.min.js"></script>
+<script src="__JS__/sm.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+[ 2018-04-17T15:25:37+08:00 ] 127.0.0.1 /index.php/?s=Api/GlobPay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0060s ]
+ERR: 非法操作:index
+
+[ 2018-04-17T15:26:30+08:00 ] 127.0.0.1 /moguplay/index.php/?s=Api/GlobPay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0100s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0100s ]
+ERR: 非法操作:index
+
+[ 2018-04-17T15:26:39+08:00 ] 127.0.0.1 /moguplay/index.php/Api/GlobPay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0070s ]
+ERR: 非法操作:index
+
+[ 2018-04-17T15:27:27+08:00 ] 127.0.0.1 /moguplay/index.php/Api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0100s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0100s ]
+NOTIC: [2] Missing argument 3 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 16 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 4 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 16 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 16 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: size E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined index: limit E:\phpStudy\WWW\moguplay\ThinkPHP\Library\Think\Db\Driver.class.php 第 923 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 1 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,20   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2873 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2851 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1428 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2863 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1268 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1140 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2437 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1133 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 400 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 399 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 209 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 392 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 197 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 183 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 342 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 152 LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] Missing argument 4 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 18 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 18 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 3 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,9   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2815 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2746 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2790 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2759 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2805 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2825 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 388 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 378 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 382 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 377 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 386 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 366 LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] Missing argument 3 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 20 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 4 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 20 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 20 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: size E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined index: limit E:\phpStudy\WWW\moguplay\ThinkPHP\Library\Think\Db\Driver.class.php 第 923 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 2 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,20   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1500 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2503 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1342 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 332 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2469 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1051 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2773 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2323 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 187 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 333 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 206 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 34 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 344 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 270 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 387 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 327 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tab_adv` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `tab_adv` WHERE `status` = 1 AND `pos_id` = 4 ORDER BY sort ASC  [ RunTime:0.0090s ]
+
+[ 2018-04-17T15:28:03+08:00 ] 127.0.0.1 /moguplay/index.php/Api/GlobPay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0070s ]
+ERR: 非法操作:index
+
+[ 2018-04-17T15:28:22+08:00 ] 127.0.0.1 /moguplay/index.php/Api/GlobPay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0070s ]
+ERR: 非法操作:index
+
+[ 2018-04-17T15:29:17+08:00 ] 127.0.0.1 /moguplay/index.php/Api/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 3 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 16 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 4 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 16 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 16 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: size E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined index: limit E:\phpStudy\WWW\moguplay\ThinkPHP\Library\Think\Db\Driver.class.php 第 923 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 1 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,20   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2873 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2851 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1428 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2863 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1268 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1140 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2437 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1133 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 400 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 399 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 209 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 392 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 197 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 183 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 342 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 152 LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 4 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 18 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 18 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 3 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,9   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2815 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2746 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2790 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2759 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2805 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2825 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 388 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 378 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 382 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 377 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 386 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 366 LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 3 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 20 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 4 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 20 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [2] Missing argument 5 for Api\Model\GameModel::type_to_select(), called in E:\phpStudy\WWW\moguplay\Application\Api\Controller\IndexController.class.php on line 20 and defined E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 85 行.
+NOTIC: [8] Undefined variable: size E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: p E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined variable: field E:\phpStudy\WWW\moguplay\Application\Api\Model\GameModel.class.php 第 127 行.
+NOTIC: [8] Undefined index: limit E:\phpStudy\WWW\moguplay\ThinkPHP\Library\Think\Db\Driver.class.php 第 923 行.
+SQL: SELECT `id`,`game_name`,`icon`,`game_size`,`introduction`,`version_num`,`version`,`and_dow_address`,`dow_mynum` FROM `tab_game` WHERE `app_recommend_status` = 2 AND `game_status` = 1 ORDER BY app_sort LIMIT 0,20   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1500 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2503 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1342 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 332 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2469 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 1051 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2773 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 2323 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 187 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 333 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 206 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 34 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 344 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 270 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 387 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `apk_pck_name` FROM `tab_game_set` WHERE `game_id` = 327 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `tab_adv` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `tab_adv` WHERE `status` = 1 AND `pos_id` = 4 ORDER BY sort ASC  [ RunTime:0.0070s ]
+

@@ -1,0 +1,22 @@
+/* 个人中心头部（未登录） */
+.page-group .headImg{background: url("../../images/personalCenter/personal-bg.png") no-repeat center;height: 9rem;text-align: center;}
+.page-group .headPortrait{display: inline-block;width: 5rem;margin-top: 2rem;}
+
+/* 个人中心头部（已登录） */
+.page-group .signHeadImg{background: url("../../images/personalCenter/personal-bg.png") no-repeat center;height: 9rem;text-align: left;}
+.page-group .signImg{display: inline-block;width: 5rem;height:5rem;border-radius:50%;margin-top: 1.2rem;margin-left: .7rem;vertical-align: middle;}
+.userName{display: inline-block;vertical-align: middle;margin-top: 1.2rem;}
+.userName span{color: #fff;font-size: .8rem;}
+
+
+/* 个人中心列表 */
+.personalList ul{background: #fff;margin-top: .7rem;}
+.personalList ul li{height: 2.2rem;padding: 0 .7rem;border-bottom: 1px solid #e4e4e4;}
+.personalList ul li .myGameImg{display: inline-block;vertical-align: middle;width: 1.2rem;}
+.personalList ul li .myGame{vertical-align: middle;font-size: .9rem;display: inline-block;margin-left: .4rem;}
+.personalList ul li .listLeft{margin: .4rem 0;}
+.personalList ul li:last-child{border-bottom: none;}
+.personalList ul li a{display: block;overflow: hidden;}
+.page-group .btn{text-align: center;margin:2.2rem 0 6.2rem;}
+.page-group .btn a{width: 14rem;height: 2.4rem;line-height: 2.4rem;color: #FFF;text-align: center;background: #F29A4F;border-radius: .5rem;border: none;font-size: 1rem;}
+

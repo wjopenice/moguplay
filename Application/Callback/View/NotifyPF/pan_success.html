@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付成功</title>
+    <link rel="stylesheet" href="/Public/Api/css/index.css">
+</head>
+<body>
+
+<!--  头部  -->
+<div class="navHeight" >
+    <!--  搜索栏  -->
+    <div class="search cf">
+        <a href="javascript:void(0)"><img src="/Public/Api/image/logo.png" width="159" height="56" alt="" class="logo fl"></a>
+    </div>
+    <!--  分割线   -->
+    <div class="cutRule"></div>
+</div>
+
+<!--  付款成功内容  -->
+<div class="paySuccessBox">
+    <div class="paySuccessInner">
+        <i class="successIcon"></i>
+        <p class="successInfo">恭喜您，支付成功！
+            <a class="successLink" href="javascript:void(0)" onClick="custom_close()">关闭本页</a></p>
+    </div>
+</div>
+
+<!--  底部版权信息   -->
+<div class="copyBox">
+    <div class="container cf">
+        <div class="subCopy">
+            <p>广州手上科技有限公司&nbsp;版权所有&nbsp;2018&nbsp;shoushangkeji.com</p>
+        </div>
+        <div class="subCopy">
+            <p>网站备案：京ICP备17006373号</p>
+        </div>
+    </div>
+</div>
+<script language="javascript">
+    // 这个脚本是 ie6和ie7 通用的脚本
+    function custom_close(){
+        if
+        (confirm("您确定要关闭本页吗？")){
+            window.opener=null;
+            window.open('','_self');
+            window.close();
+        }
+        else{}
+    }
+</script>
+</body>
+</html>

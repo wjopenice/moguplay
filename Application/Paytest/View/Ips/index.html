@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="__PUBLIC__/Api/js/jquery.js"></script>
+</head>
+<body>
+    <!--<form action="__ACTION__" method="post" enctype="multipart/form-data">-->
+        <img src="__PUBLIC__/Home/images/banner2-am.png" />
+        <p>商品名称：<span>1元硬币</span></p>
+        <!--<input type="hidden" id="ShopName" name="ShopName" value="1元硬币" />-->
+        <p>商品数量：<span>1</span></p>
+        <!--<input type="hidden" id="ShopNum" name="ShopNum" value="1" />-->
+        <p>商品价格：<span>0.01</span>元</p>
+        <!--<input type="hidden" id="ShopPrice" name="ShopPrice" value="0.01" />-->
+        <input type="button" id="btn" name="btn" value="购买" />
+    <!--</form>-->
+
+   <script>
+   $(function () {
+       $("#btn").click(function () {
+           var ShopName = $("span:eq(0)").html();
+           var ShopNum = $("span:eq(1)").html();
+           var ShopPrice = $("span:eq(2)").html();
+           $.post("__URL__/Ajaxindex",{ShopName:ShopName,ShopNum:ShopNum,ShopPrice:ShopPrice},function (msg) {
+               //window.location.href="http://localhost/moguplay/index.php?s=/Paytest/Ips/validCode?code="+msg.code+"&msg="+msg.msg;
+           },"json");
+          // window.location.href="http://www.game-pk.com/index.php?s=/Paytest/Ips/validCode";
+       });
+   });
+   </script>
+
+</body>
+</html>

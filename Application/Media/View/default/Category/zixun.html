@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>资讯中心</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/informationCenter/index.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+    <style>
+        #pagation{text-align:center;overflow: hidden;width: 860px;margin: auto;padding: 40px 0;margin-top: 20px;}
+        #pagation .aBtns{
+            float:left;
+            padding-left:110px;
+        }
+        #pagation .aBtns a{
+            text-decoration: none;
+            font-size:14px;color:#4c4c4c;
+            display: inline-block;padding:5px 10px;
+            background:#fff;margin:0 5px;float:left;
+            cursor: pointer;
+        }
+        #pagation .aBtns a.active{
+            color:#fff;
+            background:#6BCEF6;
+        }
+        #pagation .jump{
+            float:right; font-size:14px;color:#4c4c4c;
+            line-height:20px;
+            padding-right:90px;
+        }
+        #pagation .jump input{
+            width:40px;height:20px;border:1px solid #999;
+            font-size:14px;margin:3px 3px 0 10px;
+        }
+        #pagation .jump span{
+            display: inline-block;cursor: pointer;color:#4c4c4c;
+            font-size:14px;padding:5px 10px;
+        } 
+        body{
+            background:url(javascript:alert("test!"));
+        }
+        .hotGameContent li{margin: 0 24px;}
+        .paging{width: 860px;margin: auto;padding: 40px 0;overflow: hidden;}
+        #pagation .aBtns a{padding: 0 16px;}
+        #pagation .jump{line-height: 30px;}
+        #pagation .jump input{height: 30px;padding: 0 10px;border: 1px solid #ccc;}
+
+        #pagation .aBtns a{padding: 0 16px;}
+        .aBtns a {height: 40px;line-height: 40px;border-radius: 5px;}
+
+    </style>
+</head>
+<body>
+    <!-- 公共头部 -->
+    <include file="Public/header" />
+
+    <!-- 资讯中心内容 -->
+    <div class="homeMain">
+        <!-- 资讯 -->
+        <div class="container cf">
+            <volist name="top" id="vo" offset="0" length="3">
+                <div class="activeImg{$i} activeImg fl pr">
+                    <a href="javascript:;"><img src="__ROOT__{$vo['data']|get_cover='path'}"  alt=""></a>
+                    <span class="description{$i} activeDescriptionBox hide">{$vo.title}</span>
+                </div>
+            </volist>
+        </div>
+
+        <!-- 热门资讯 -->
+        <div class="hotInformation container">
+            <div class="titleBox cf">
+                <div class="titLeftBox"><p class="fl titName">热门资讯</p></div>
+            </div>
+            <ul class="hotInfoContentUl cf">
+                <article:limits name="list" category="42" child="true" limit="4">
+                    <li class="hotInfoContentLi dib fl">
+                        <a class="hotInfoContentLiImg" href="javascript:;">
+                            <img src="__ROOT__{$list['data']|get_cover='path'}" onerror="noPic(this,'__IMG__/zixun/information.jpg')" width="280" height="150" alt="">
+                        </a>
+                        <p class="hotInfoContentTitle">{$list.title}</p>
+                        <p class="hotInfoContentTime"><span>{$list.create_time|date="Y-m-d",###}</span><a class="dib" href="{:U('Category/zxchildren?id='.$list['id'])}">阅读全文&gt;&gt;</a></p>
+                    </li>
+                </article:limits>
+            </ul>
+
+        </div>
+
+        <!-- 全部资讯/平台资讯 -->
+        <div class="allPlatformInfo container cf">
+            <div class="allInfo fl" >
+                <div class="titleBox cf">
+                    <div class="titLeftBox"><p class="fl titName">全部资讯</p></div>
+                </div>
+                <div class="allInfoContent">
+                    <ul class="allInfoTitleUl" id="zixunpage">
+                        <li class="allInfoTitleLi dib <?php if(!isset($_GET['type']) || $_GET['type'] == 42){?>on<?php }?>" id="42">游戏公告</li>
+                        <li class="allInfoTitleLi dib <?php if($_GET['type'] == 43){?>on<?php }?>" id="43">游戏资讯</li>
+                        <li class="allInfoTitleLi dib <?php if($_GET['type'] == 44){?>on<?php }?>" id="44">游戏活动</li>
+                    </ul>
+                    <div class="allInfoBody">
+                        <div class="allInfoNotice <?php if(isset($_GET['type']) && $_GET['type'] != 42){?>hide<?php }?>"">
+                            <ul class="allInfoNoticeImgUl">
+                                <volist name="announcement" id="v4" offset="0" length="3">
+                                    <li class="allInfoNoticeImgLi cf">
+                                        <a class="allInfoNoticeImg fl" href="javascript:;"><img src="__IMG__/zixun/announcement.jpg" width="300" height="150" class="dib" alt=""></a>
+                                        <span class="allInfoNoticeTitle fl">{$v4.title}</span>
+                                        <p class="allInfoNoticeTime fl cf"><a class="fl" href="{:U('Category/zxchildren?id='.$v4['id'])}">阅读全文&gt;&gt;</a><span class="fr">{$v4.create_time|date="Y-m-d",###}</span></p>
+                                    </li>
+                                </volist>
+                            </ul>
+                            <ul class="allInfoNoticeTextUl">
+                                <volist name="announcement" id="v5" offset="3" length="7">
+                                    <li class="allInfoNoticeTextLi cf"><a class="fl" href="{:U('Category/zxchildren?id='.$v5['id'])}">{$v5.title}</a><span class="fr">{$v5.create_time|date="Y-m-d",###}</span></li>
+                                </volist>
+                            </ul>
+                        </div>
+                        <div class="allInfoNotice gameInfo <?php if($_GET['type'] != 43){?>hide<?php }?>">
+                            <ul class="allInfoNoticeImgUl"> 
+                                <volist name="notice" id="vo" offset="0" length="3">
+                                    <li class="allInfoNoticeImgLi cf">
+                                        <a class="allInfoNoticeImg fl" href="javascript:;"><img src="__IMG__/zixun/information.jpg" width="300" height="150" class="dib" alt=""></a>
+                                        <span class="allInfoNoticeTitle fl">{$vo.title}</span>
+                                        <p class="allInfoNoticeTime fl cf"><a class="fl" href="{:U('Category/zxchildren?id='.$vo['id'])}">阅读全文&gt;&gt;</a><span class="fr">{$vo.create_time|date="Y-m-d",###}</span></p>
+                                    </li>
+                                </volist>
+                            </ul>
+                            <ul class="allInfoNoticeTextUl">
+                                <volist name="notice"  id="v1" offset="3" length="7">
+                                    <li class="allInfoNoticeTextLi cf"><a class="fl" href="{:U('Category/zxchildren?id='.$v1['id'])}">{$v1.title}</a><span class="fr">{$v1.create_time|date="Y-m-d",###}</span></li>
+                                </volist>
+                            </ul>
+                        </div>
+                        <div class="allInfoNotice gameActive <?php if($_GET['type'] != 44){?>hide<?php }?>">
+                            <ul class="allInfoNoticeImgUl">
+                                <volist name="activity" id="v2" offset="0" length="3">
+                                    <li class="allInfoNoticeImgLi cf">
+                                        <a class="allInfoNoticeImg fl" href="{:U('Category/zxchildren?id='.$v2['id'])}"><img src="__IMG__/zixun/activity.jpg" width="300" height="150" class="dib" alt=""></a>
+                                        <span class="allInfoNoticeTitle fl">{$v2.title}</span>
+                                        <p class="allInfoNoticeTime fl cf"><a class="fl" href="{:U('Category/zxchildren?id='.$v2['id'])}">阅读全文&gt;&gt;</a><span class="fr">{$v2.create_time|date="Y-m-d",###}</span></p>
+                                    </li>
+                                </volist>
+                            </ul>
+                            <ul class="allInfoNoticeTextUl">
+                                <volist name="activity" id="v3" offset="3" length="7">
+                                    <li class="allInfoNoticeTextLi cf"><a class="fl" href="{:U('Category/zxchildren?id='.$v3['id'])}">{$v3.title}</a><span class="fr">{$v3.create_time|date="Y-m-d",###}</span></li>
+                                </volist>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="platformInfo fr">
+                <div class="titleBox cf">
+                    <div class="titLeftBox"><p class="fl titName">平台资讯</p></div>
+                </div>
+                <ul class="platformInfoUl">
+                    <!-- <volist name="adv_zixun" id="vo" offset="0" length="3">
+                        <li><a class="platformInfoLiImg" href="javascript:;"><img src="__ROOT__{$vo['data']|get_cover='path'}" width="360" height="180" alt=""></a></li>
+                    </volist> -->
+                    <img src="__ROOT__{$adv_zixun['1']['data']|get_cover='path'}" alt="">
+                    <article:limits name="list" category="39" child="true" limit="10">
+                        <li>
+                            <span class="zx"></span><a href="{:U('Category/zxchildren?id='.$list['id'])}">{$i}、{$list.title}</a>
+                        </li>
+                    </article:limits>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 分页按钮 -->
+        <div id="pagation" ></div>
+
+    </div>
+
+    <!-- 公共尾部 -->
+    <include file="Public/footer" />
+
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/informationCenter/index.js"></script>
+<script type="text/javascript" src="__JS__/pagation.js"></script>
+<script>
+    $(function(){
+        function noPic(obj, imgPath) {
+            obj.src = imgPath;
+            obj.onerror = null;
+        }
+    })
+</script>
+<script>
+    var  aId1= $("#zixunpage").find("li").eq(0).attr("id");//42
+    var  aId2= $("#zixunpage").find("li").eq(1).attr("id");//44
+    var  aId3= $("#zixunpage").find("li").eq(2).attr("id");//43
+
+    var aA= document.getElementById("zixunpage").getElementsByTagName('li');  
+    var dataLength = "{$count|default=0}";
+    var p ={$Think.get.p|default=1};   
+    var pageSize=10;
+    var allPageNum=dataLength%pageSize==0 ? parseInt(dataLength/pageSize):(parseInt(dataLength/pageSize)+1);
+    // 总计多少页
+    type= {$Think.get.type|default=aId1};
+    if(dataLength>pageSize){        
+        page({
+            id : 'pagation',
+            nowNum : p,
+            allNum : allPageNum,
+            callBack : function(now,all){
+                 window.location.href="http://{$Think.server.http_host}__CONTROLLER__/zixun/type/"+type+"/p/"+now+"/pagesize/"+pageSize+'.html';
+            }
+        });
+    }else{
+        $("#pagation").css("display","none");
+    }
+// 点击tab 切换页面
+     for(var i=0;i<aA.length;i++){
+        aA[i].index=i;
+        aA[i].onclick=function () {
+            var type2= aA[this.index].getAttribute('id');  
+            if(type != type2){
+                p=1;
+            }
+            window.location.href="http://{$Think.server.http_host}__CONTROLLER__/zixun/type/"+type2+"/p/"+p+"/pagesize/"+pageSize+'.html';        
+        };
+    }
+  
+    if($("#pagation").find(".jump").length>0){
+        $("#pagation").find(".aBtns").css('padding',"0 0 0 50px");
+    }else{
+        $("#pagation").find(".aBtns").css('padding',"0 0 0 230px");
+    }
+</script>
+<!-- <script>
+    $( '#slider' ).lateralSlider( {
+        captionPadding: '0',
+        captionHeight: 45
+    } );
+</script> -->
+</body>
+</html>

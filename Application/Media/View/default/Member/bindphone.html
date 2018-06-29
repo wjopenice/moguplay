@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>个人中心-安全中心</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/personalCenter/common.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+
+<!--  头部   -->
+<include file="Public/header" />
+
+<!--  个人中心的主内容    -->
+<div class="homeMain">
+    <div class="personalBarBox">
+        <div class="personalBar container">
+            <ul class="subPersonalUl cf">
+                <li class="subPersonalBar fl baseInfo"><a class="link" href="{:U('Member/personalcenter')}"><i></i><p>基本信息</p></a></li>
+                <li class="subPersonalBar fl safeCenter active"><a class="link" href="{:U('Member/pcsafecenter')}"><i></i><p>安全中心</p></a></li>
+                <li class="subPersonalBar fl infoCenter"><a class="link" href="{:U('Member/pcmessage')}"><i></i><p>信息中心</p></a></li>
+                <li class="subPersonalBar fl transactionRecord"><a class="link" href="{:U('Member/pctrade')}"><i></i><p>交易记录</p></a></li>
+                <li class="subPersonalBar fl accountBalance"><a class="link" href="{:U('Member/pcaccountyue')}"><i></i><p>账户余额</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   基本信息的内容     -->
+    <div class="contentBoxWrap container baseInfoContent">
+        <div class="contentTitBox cf">
+            <p class="contentTit fl safeCenter">安全中心</p>
+        </div>
+        <div class="contentWrap cf">
+            <div class="linkBox fl">
+                <ul>
+                    <li class="safeUl">
+                        <a href="{:U('Member/pcsafecenter')}">密码修改</a>
+                    </li>
+                    <li class="safeUl active">
+                        <if condition="$user['phone'] eq ''">
+                            <a href="{:U('Member/bindphone')}"> 
+                                绑定手机
+                            </a>
+                        <else />
+                            <a href="{:U('Member/nobindphone')}"> 
+                                绑定手机
+                            </a>
+                        </if>
+                    </li>
+                    <li class="safeUl">
+                        <if condition="$user['email'] eq ''">
+                            <a href="{:U('Member/bindemail')}">
+                                绑定邮箱
+                            </a>
+                       <else />
+                            <a href="{:U('Member/nobindemail')}">
+                                绑定邮箱
+                            </a>
+                       </if>
+                    </li>
+                    <li class="safeUl">
+                        <if condition="$user['idcard'] eq ''">
+                            <a href="{:U('Member/noidcard')}">
+                                实名认证
+                            </a>
+                        <else />
+                            <a href="{:U('Member/idcard')}">
+                               实名认证
+                            </a>
+                        </if>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="linkContent fl">
+                <!--  绑定手机  -->
+                <div class="subLinkContent">
+
+                    <!--  绑定手机的导航栏   -->
+                    <div class="bindPhoneStepBox fl cf">
+                        <i class="defaultStep1 <?php if( !isset($_GET['account'])){echo 'active';}?>">1.确认账号</i>
+                        <i class="defaultStep2 <?php if(isset($_GET['type']) && $_GET['type'] == 2){echo 'active';}?>">2.手机验证</i>
+                        <i class="defaultStep3 <?php if(isset($_GET['type']) && $_GET['type'] == 3){echo 'active';}?>" >3.完成绑定</i>
+                    </div>
+
+                    <switch name="m">
+                        <case value="1">
+                            <!--   手机验证   -->
+                            <div class="phoneVerifyBox ">
+                                <div class="eachFormBox fl cf">
+                                    <div class="subFormName fl">当前账号：</div>
+                                    <div class="subFormInput fl blue" id="uname">{$user['account']}</div>
+                                </div>
+                                <div class="eachFormBox fl cf">
+                                    <div class="subFormName fl">密码：</div>
+                                    <div class="subFormInput fl">
+                                        <input type="password" class="subInput" id="telpassword">
+                                    </div>
+                                    <div class="subFormOther fl cf">
+                                        <!--  表单正确的情况   -->
+                                        <!--<i class="formCorrect"></i>-->
+                                        <!--  表单错误的情况    -->
+                                        <!--<div class="errorForm fl hide">*请输入正确的密码格式</div>-->
+                                        <!--  表单默认提示   -->
+                                        <div class="formTip" id="teltips" >
+                                            <span class="a_red">*</span>请输入密码
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="btnFinish" id="achieve">完成</a>
+                            </div>
+                        </case>
+
+                        <case value="2">
+                            <!--绑定手机-->
+                            <div class="phoneVerifyBox ">
+                                <div class="eachFormBox fl cf">
+                                    <div class="subFormName fl">当前账号：</div>
+                                    <div class="subFormInput fl blue">{$user['account']}</div>
+                                </div>
+                                <div class="eachFormBox fl cf">
+                                    <div class="subFormName fl">手机号：</div>
+                                    <div class="subFormInput fl">
+                                        <input type="text" class="subInput" id="telnumber">
+                                        <input type="button" class="btnSendSmsCode" readonly id="ident" value="发送验证码">
+                                    </div>
+                                    <div class="subFormOther fl">
+                                        <div class="formTip" id="numtips">
+                                            <span class="a_red">*</span>请输入手机号
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="eachFormBox fl cf">
+                                    <div class="subFormName fl">验证码：</div>
+                                    <div class="subFormInput fl"><input type="text" class="subInput" id="code"></div>
+                                    <div class="subFormOther fl">
+                                        <div class="formTip" id="codetips">
+                                            <span class="a_red">*</span>请输入手机验证码
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="btnFinish" id="achieve2">完成</a>
+                            </div>
+                        </case>
+
+                        <!--绑定手机第三步-->
+                        <case value="3">
+                            <!--   完成绑定   -->
+                            <div class="finishBind fl">
+                                <i></i>
+                                <span>您已成功绑定手机</span>
+                            </div>
+                        </case>
+                    </switch>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   底部    -->
+<include file="Public/footer" />
+
+
+<script>
+    var zqimg="__IMG__/wjmm/quanbuzhengquan.png";
+    var MODULE = "__MODULE__";
+    var account="{$user['account']}";
+    var verifypwdurl="{:U('Member/verifypwd')}";
+    var phonebangcheck="{:U('Member/phonebangcheck')}";
+    var sendvcodeurl="{:U('Member/sendvcode')}"; 
+    var phoneurl= "{:U('Member/phone')}";
+    var nobindphoneurl="{:U('Member/nobindphone')}"; 
+    var account = "{$Think.get.account}";  
+</script>
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/personalCenter/common.js"></script>
+<script src="__JS__/centerbindphone.js"></script>
+</body>
+</html>

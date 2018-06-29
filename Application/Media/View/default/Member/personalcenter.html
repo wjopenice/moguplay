@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>个人中心-基本信息</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/personalCenter/common.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+
+<!--  头部   -->
+<include file="Public/header" />
+
+<!--  个人中心的主内容    -->
+<div class="homeMain">
+    <div class="personalBarBox">
+        <div class="personalBar container">
+            <ul class="subPersonalUl cf">
+                <li class="subPersonalBar fl baseInfo active"><a class="link" href="{:U('Member/personalcenter')}"><i></i><p>基本信息</p></a></li>
+                <li class="subPersonalBar fl safeCenter"><a class="link" href="{:U('Member/pcsafecenter')}"><i></i><p>安全中心</p></a></li>
+                <li class="subPersonalBar fl infoCenter"><a class="link" href="{:U('Member/pcmessage')}"><i></i><p>信息中心</p></a></li>
+                <li class="subPersonalBar fl transactionRecord"><a class="link" href="{:U('Member/pctrade')}"><i></i><p>交易记录</p></a></li>
+                <li class="subPersonalBar fl accountBalance"><a class="link" href="{:U('Member/pcaccountyue')}"><i></i><p>账户余额</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   基本信息的内容     -->
+    <div class="contentBoxWrap container baseInfoContent">
+        <div class="contentTitBox cf">
+            <p class="contentTit fl baseInfo">基本信息</p>
+        </div>
+        <div class="contentWrap cf">
+            <div class="headLeft fl cf">
+                <div class="headImgBox fl">
+                    <img src="/Uploads/{$user.user_img}" onerror="this.onerror = null; this.src ='__PUBLIC__/Media/image/personalcenter/baseinfo/touxiang.png';" alt="">
+                </div>
+                <div class="userAccount fl">
+                    用户账号：<span id="account">{$user.account}</span>
+                </div>
+                <div class="userNick fl">
+                    用户昵称：<span class="nickNameSpan">{$user.nickname|default='昵称'}</span>
+                </div>
+                <div class="safeLevel fl cf">
+                    <div class="levelBox fl"><i style="width: {$user.levelNum}%;"></i></div>
+                    <p class="levelInfo fl">安全级别：<span class="levelHigh">{$user.level}</span></p>
+                </div>
+            </div>
+            <div class="accountRight fl cf">
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">用户账号：</div>
+                    <div class="formInput fl"><input type="text" class="subInput" placeholder="{$user.account}" readonly></div>
+                    <div class="formOther fl"><span class="a_red">*</span>此账号是您唯一的登录账号</div>
+                </div>
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">用户昵称：</div>
+                    <div class="formInput fl"><input type="text" class="subInput userNickInput" placeholder="{$user.nickname|default='昵称'}" readonly></div>
+                    <div class="formOther fl"><a href="javascript:void(0)" class="btnOperation" id="updateNick">修改</a></div>
+                </div>
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">平台币余额：</div>
+                    <div class="formInput fl"><input type="text" class="subInput" placeholder="{$user.balance}" readonly></div>
+                    <div class="formOther fl"><a href="{:U('Recharge/chongzhi')}" class="btnOperation" id="recharge">充值</a></div>
+                </div>
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">积分：</div>
+                    <div class="formInput fl"><input type="text" class="subInput" placeholder="{$user.points}" readonly></div>
+                    <div class="formOther fl"><a href="{:U('Member/points')}" class="btnOperation">积分记录</a></div>
+                </div>
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">绑定手机号：</div>
+                    <div class="formInput fl"><input type="text" class="subInput" placeholder="{$user.phone}" readonly></div>
+                    <div class="formOther fl">
+                        <if condition="$user.phone eq ''">
+                            <a href="{:U('Member/bindphone')}" class="btnOperation">绑定</a>
+                        <else/>
+                            <a href="{:U('Member/nobindphone')}" class="btnOperation">更换</a>
+                        </if>
+                    </div>
+                </div>
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">真实姓名：</div>
+                    <div class="formInput fl"><input type="text" class="subInput" placeholder="{$user.real_name}" readonly></div>
+                    <div class="formOther fl">
+                        <if condition="$user.idCard eq ''">
+                            <a href="{:U('Member/noidcard')}" class="btnOperation">实名认证</a>
+                        </if>
+                    </div>
+                </div>
+                <div class="subFormBox fl cf">
+                    <div class="formName fl">身份证号：</div>
+                    <div class="formInput fl"><input type="text" class="subInput" placeholder="{$user.idcard}" readonly></div>
+                    <div class="formOther fl"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   底部    -->
+<include file="Public/footer" />
+
+<script type="text/javascript">
+    var MODULE = "__MODULE__";
+</script>
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/jquery.ext.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/personalCenter/common.js"></script>
+</body>
+</html>

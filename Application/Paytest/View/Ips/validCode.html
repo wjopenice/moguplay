@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="__PUBLIC__/Api/js/jquery.js"></script>
+</head>
+<body>
+    <div style="width:164px;text-align: center;"><img src="__PUBLIC__/{$pic}" /><p>请扫码支付</p></div>
+
+   <script>
+   window.setTimeout(function () {
+       IpsCodePay();
+   },1500);
+   var IpsCodePay = function () {
+       $.post("__URL__/IpsCodePay",{},function (msg) {
+          console.log("1");
+       },"json");
+   }
+   </script>
+</body>
+</html>

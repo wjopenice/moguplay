@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>积分明细</title>
+    <link rel="stylesheet" href="../Static/Css/sm.min.css">
+    <link rel="stylesheet" href="../Static/Css/sm-extend.min.css">
+    <link rel="stylesheet" href="../Static/Css/public.css">
+    <link rel="stylesheet" href="../Static/Css/integralDetail/index.css">
+</head>
+<body class="mHome">
+    <!--  加载层   -->
+    <div id="loader">
+        <div class="loaderInner">
+            <img src="../Static/images/index/logo.png" alt="">
+        </div>
+    </div>
+    <!-- 积分明细内容 -->
+    <div class="page-group">
+        <!-- 头部 -->
+        <div class="headImg">
+            <p class="sign dib cf"><span class="signDate dib fl">25</span><span class="signText dib fl">积分</span></p>
+        </div>
+
+        <!-- 积分明细列表 -->
+        <ul class="integralDetailUl">
+            <li class="integralDetailLi cf">
+                <div class="integralDetailText fl">
+                    <p class="integralDetailName">签到</p>
+                    <p class="signIntegral"><span class="dib">2018-3-20</span><span class="signIntegralTimer dib">18:18:45</span></p>
+                </div>
+                <span class="integralDetailDate fr dib">+5</span>
+            </li>
+            <li class="integralDetailLi cf">
+                <div class="integralDetailText fl">
+                    <p class="integralDetailName">分享平台/游戏</p>
+                    <p class="signIntegral"><span class="dib">2018-3-20</span><span class="signIntegralTimer dib">18:18:45</span></p>
+                </div>
+                <span class="integralDetailDate fr dib">+10</span>
+            </li>
+            <li class="integralDetailLi cf">
+                <div class="integralDetailText fl">
+                    <p class="integralDetailName">首日充值</p>
+                    <p class="signIntegral"><span class="dib">2018-3-20</span><span class="signIntegralTimer dib">18:18:45</span></p>
+                </div>
+                <span class="integralDetailDate fr dib">+10</span>
+            </li>
+        </ul>
+
+        <!--   底部导航栏   -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external footTap-game " href="./../index.html">
+                <span class="icon"></span>
+                <span class="tab-label">游戏</span>
+            </a>
+            <a class="tab-item external footTap-mall" href="../View/information.html">
+                <span class="icon"></span>
+                <span class="tab-label">商城</span>
+            </a>
+            <a class="tab-item external footTap-center active" href="../View/personalCenter.html">
+                <span class="icon"></span>
+                <span class="tab-label">我</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="../Static/Js/zepto.min.js"></script>
+    <script src="../Static/Js/sm.min.js"></script>
+    <script src="../Static/Js/sm-extend.min.js"></script>
+    <script src="../Static/Js/main.js"></script>
+</body>
+</html>

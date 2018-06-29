@@ -1,0 +1,24 @@
+/*  back返回   */
+.backBox{width: 86%;height: 2rem;margin: 0 auto;}
+.backIcon{margin-top: 1rem;}
+.backIcon .icon{font-size: 1rem;color: #00c9e1;}
+/*.backIcon{display: block;float: left;width: 1.3rem;height: 1.8rem;margin:1rem 0 0 1rem;background: url("../../images/forgetPwd/back.png")no-repeat;background-size: 1.4rem 1.4rem;}*/
+
+/*   登录logo    */
+.logo{width: 7rem;text-align:center;margin: 1rem auto;}
+.logo .logoImg{width: 6rem;height: 6rem;border-radius:50%;margin:2.4rem auto;}
+.logo .logoChName{margin-top:-2rem;font-size: 1.4rem;font-weight: bold;}
+.logo .logoEnName{font-size: .1rem;font-weight: normal;}
+
+/*  表单   */
+.formBox{width: 80%;margin: 0 auto;}
+.formBoxWrap{width: 100%;height:2.5rem;line-height:2.5rem;font-size:1rem;margin: 0 auto;border-bottom: 1px solid #999;}
+.formBoxWrap .formInput{border:none;width:8rem;height: 2.1rem;margin-top:.2rem;padding:0 1rem;font-size:.7rem;line-height: 2.1rem;}
+.formName,.formName img{width: 1rem;height: 1rem;}
+.formName{margin: .7rem auto;}
+
+/*  按钮和同意协议  */
+.btn-loginBox{height: 4rem;}
+.btnConfirm{display:block;float:left;width: 100%;height: 2.3rem;margin-top:1rem;line-height:2.3rem;font-size:1rem;text-align:center;color:#FFF;background:#00c9e1;border-radius: .5rem;}
+.btn-code{position: absolute;top:.4rem;display: block;width:4rem;height:1.7rem;line-height:1.7rem;text-align:center;border:none;font-size:.65rem;right: 0;color:#FFF;border-radius:.4rem;background: #00c9e1;}
+.btn-code:active{color: #FFF;}

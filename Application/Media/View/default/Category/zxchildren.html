@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>资讯详情</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/informationCenter/detail.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+    <!-- 公共头部 -->
+    <include file="Public/header" />
+
+    <!-- 资讯详情内容 -->
+    <div class="homeMain">
+        <div class="container">
+            <!-- 资讯详情面包屑 -->
+            <div class="customerCrumbs">
+                <span>当前位置：</span>
+                <a href="{:U('Category/zixun')}">资讯中心</a>
+            </div>
+
+            <!-- 资讯 -->
+            <div class="infoDetail cf">
+                <div class="infoArticle fl">
+                    <div class="ArticleTitle">
+                        <p class="title dib">{$vo.title}</p>
+                        <p class="time">作者:  {:get_admin_name($vo['admin'])}&emsp;&emsp;&emsp;&emsp;时间：{$vo.create_time|date="Y-m-d H:i:s",###}</p>
+                    </div>
+                    <div class="ArticleContent">
+                        <!-- <p class="call">尊敬的《猎妖》玩家：</p> -->
+                        <p class="content">{$vo.content}</p>
+                    </div>
+                </div>
+
+                <!-- 最热礼包/热门游戏 -->
+                <div class="hot fr">
+                    <!-- 最热礼包 -->
+                    <div class="hotGift">
+                        <div class="titleBox cf">
+                            <div class="titLeftBox"><p class="fl titName">最热礼包</p></div>
+                        </div>
+                        <div class="hotGiftContent">
+                            <ul class="activeRankUl cf">
+                                <volist name="gift" id="vo">
+                                    <li class="subActiveRankLi">
+                                        <div class="rankInfo cf">
+                                            <img src="__ROOT__{$vo.icon|get_cover='path'}" height="66" width="66" class="rankImg fl"/>
+                                            <div class="rankRight fl">
+                                                <p class="rankNme">{$vo.giftbag_name} - {$vo.game_name}</p>
+                                                <p class="rankText" id="{$vo.gift_id}">{:msubstr($vo['desribe'],0,30,'UTF-8',false)}</p>
+                                            </div>
+                                            <p class="rankOperate fr"><a href="javascript:void(0)" class="fl btnRankDown">领取</a>
+                                        </div>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 热门游戏 -->
+                    <div class="hotGame">
+                        <div class="titleBox cf">
+                            <div class="titLeftBox"><p class="fl titName">热门游戏</p></div>
+                        </div>
+                        <ul class="allGameContent cf">
+                            <volist name="hot" id="vo">
+                                <li class="subAllGame cf">
+                                    <div class="gameImg fl">
+                                        <a class="gameTitleImg" href="{:U('Game/yxchildren?id='.$vo['id'].'')}"><img src="__ROOT__{$vo.icon|get_cover='path'}" width="80" height="80"></a>
+                                    </div>
+                                    <div class="gameContent fl">
+                                        <p class="subGameName">{$vo.game_name}</p>
+                                        <p class="subGameTypeBox"><span class="subGameType">{$vo['game_type_name']} </span><span> | </span><span class="subGameBig">{$vo['game_size']}</span></p>
+                                        <p class="operateBtnBox cf">
+                                            <a href="<if condition='$vo.dow_status eq 0'>#<else/>{:U('Down/down_file?game_id='.$vo['id'].'&type=1')}</if>" class="btnDownLoad fl">下载</a>
+                                        </p>
+                                    </div>
+                                </li>                     
+                            </volist> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 公共尾部 -->
+    <include file="Public/footer" />
+
+
+<script type="text/javascript">
+    var giftUrl = "{:U('Member/getGameGift')}";
+</script>
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/jquery.ext.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/informationCenter/detail.js"></script>
+</body>
+</html>

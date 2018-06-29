@@ -1,0 +1,23 @@
+/* 头部 */
+.page-group{background: #f4f4f4;}
+.head{padding: .7rem .7rem 0;text-align: center;}
+.head img{width: 2.8rem;height: 2.8rem;}
+.packageDetailName{font-size: .9rem;font-weight: 600;}
+
+/* 礼包列表 */
+.packageUl{margin-bottom: 3.2rem;}
+.packageLi{padding: .3rem .7rem 0;}
+
+.packageContent{background: #fff;border-radius: 6px;margin-top: .6rem;padding: .8rem;}
+.packageContentLeft{width: 55%;}
+.packageContentName{font-size: .9rem;font-weight: 600;padding-bottom: .2rem;}
+.packageContentText{font-size: .7rem;color: #999;padding-bottom: .6rem;}
+
+/* 百分比 */
+.percentage{line-height: 12px}
+.percent{width: 66%;height: 10px;background: #eee;border-radius: 5px;}
+.percentSpeed{height: 10px;border-radius: 5px;background: linear-gradient(to right, #02cae1, #91febb);}
+.percentDate{font-size: .7rem;width: 30%;color: #333;}
+
+.receive{width: 4.2rem;margin: 1.8rem 0;background: #00c9e1;color: #fff;font-size: .9rem;padding: .2rem 0;border-radius: 20px;text-align: center;}
+.alreadyReceive{width: 4.2rem;margin: 1.8rem 0;color: #fff;font-size: .9rem;padding: .2rem 0;border-radius: 20px;text-align: center;background: #ccc;}
