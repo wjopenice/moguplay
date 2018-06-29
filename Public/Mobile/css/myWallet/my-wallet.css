@@ -1,9 +1,0 @@
-/* 我的钱包 */
-.page-group{background: #f4f4f4;}
-.consumptionDetail{height: 2.5rem;background: #fff;font-size: .8rem;text-align: right;line-height: 2.5rem;padding: 0 .7rem;}
-.recharge{padding: 2.5rem;text-align: center;}
-.recharge img{display: inline-block;width: 7.6rem;}
-.platformCurrency{color: #333;font-size: 1rem;}
-.money{font-weight: 600;font-size: 1.6rem;}
-.rechargeBtn{text-align: center;}
-.rechargeBtn a{width: 14rem;height: 2.4rem;color: #FFF;text-align: center;background: #F29A4F;border-radius: .5rem;border: none;font-size: 1rem;line-height: 2.4rem;}
