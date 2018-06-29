@@ -1,0 +1,26 @@
+/*   返回      */
+.returnBox{margin: 1rem 1rem 2rem 1rem;}
+.return{height:.9rem;font-size: 1rem;color: #333;line-height:.9rem;}
+.returnIcon{display: block;float:left;width: .5rem;height:1rem;background: url("../../images/login/returnIcon.png") no-repeat;background-size: .5rem 1rem;}
+.returnName{float: left;margin-left: .5rem;}
+.reg{font-size: .9rem;color: #00c9e1;}
+
+/*   登录logo    */
+.logo{width: 7rem;text-align:center;margin: 4rem auto 2rem auto;}
+.logo .logoImg{width: 6rem;height: 6rem;border-radius:50%;margin:3rem auto;}
+.logo .logoChName{margin-top:-2rem;font-size: 1.4rem;font-weight: 900;}
+.logo .logoEnName{font-size: .1rem;font-weight: normal;}
+
+/*  表单   */
+.formBox{width: 80%;margin: 0 auto;}
+.formBoxWrap{width: 100%;height:2.5rem;line-height:2.5rem;font-size:1rem;margin: 0 auto;border-bottom: 1px solid #999;}
+.formBoxWrap input{border:none;width:8rem;height: 2.1rem;font-size:.8rem;margin-top:.2rem;margin-left:1rem;padding:0 .5rem;line-height: 2.1rem;}
+.formName,.formName img{width: 1rem;height: 1rem;}
+.formName{margin-top:.7rem;margin-left: .5rem;}
+
+/*  按钮   */
+.btn-loginBox{height: 4rem;}
+.btnLogin{width: 100%;height: 2.5rem;margin-top:2.5rem;line-height:2.5rem;text-align:center;color:#FFF;    background: linear-gradient(to right, #01c9e1, #8ffde1);border-radius: .5rem;}
+.operation{margin-top: 6.4rem;}
+.operation a{color: #999;}
+

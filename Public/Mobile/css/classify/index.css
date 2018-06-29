@@ -1,0 +1,22 @@
+html,body{width: 100%;height: 100%;}
+
+/*      分类类别       */
+.classifyName,.classifyInfo{height:100%;overflow-y:auto;}
+.classifyName{width: 20%;background: #EEE;}
+.classifyInfo{width: 80%;background: #FFF;}
+.classifyLink{display: block;float: left;width: 100%;height: 3rem;font-size:.7rem;line-height: 3rem;text-align: center;color: #333;border-bottom: 1px solid #CCC;}
+.classifyLink.active{background: linear-gradient(to right, #04dbe4, #acecdf);-webkit-background-clip: text;color: transparent;}
+
+/*     分类内容      */
+.subClassify{width:100%;padding:.6rem;}
+.classifyImg{display:block;width: 3rem;height: 3rem;}
+.classifyNameBox{max-width:4rem;margin-left:.4rem;margin-right:.4rem;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.classifyNameTag{font-size: 1rem;color: #333;}
+.classifyType{width:100%;font-size: .7rem;color: #999;}
+.classifyEnter{display: block;width: 2.4rem;height: 1.5rem;margin-top:.5rem;margin-right:0;line-height: 1.4rem;font-size:.9rem;text-align: center;background: #E5E5E5;color: #666;border:1px solid #CCC;border-radius: .3rem;}
+.classifyRank{display: block;float:left;margin-left:.4rem;margin-top:.2rem;font-style: normal;color: #999;}
+
+.first{color: #ff7a00;}
+.second{color: #ffae00;}
+.third{color: #ffc340;}
+

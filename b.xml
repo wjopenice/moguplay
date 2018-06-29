@@ -1,0 +1,1 @@
+<Ips><GateWayRsp><head><ReferenceID>0001</ReferenceID><RspCode>000000</RspCode><RspMsg><![CDATA[交易成功]]></RspMsg><ReqDate>20180419135142</ReqDate><RspDate>20180419135318</RspDate><Signature>c434966f24ff480bd6d94c8ad25e43e1</Signature></head><body><QrCode>weixin://wxpay/bizpayurl?pr=zOuUxrY</QrCode></body></GateWayRsp></Ips>

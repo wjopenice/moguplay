@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/index/index.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+    <!--  头部   -->
+    <include file="Public/header" />
+
+    <!--  中间主页   -->
+    <div class="homeMain">
+        <!--  banner   -->
+        <div class="slide-box">
+            <ul class="slide-content">
+                <li style="background: url(__PUBLIC__/Media/image/common/banner/banner1.jpg) 100% 500px;"><a href="javascript:void(0)" target="_blank"></a></li>
+                <li style="background: url(__PUBLIC__/Media/image/common/banner/banner2.jpg) 100% 500px;"><a href="javascript:void(0)" target="_blank"></a></li>
+                <li style="background: url(__PUBLIC__/Media/image/common/banner/banner3.jpg) 100% 500px;"><a href="javascript:void(0)" target="_blank"></a></li>
+                <li style="background: url(__PUBLIC__/Media/image/common/banner/banner4.jpg) 100% 500px;"><a href="javascript:void(0)" target="_blank"></a></li>
+                <li style="background: url(__PUBLIC__/Media/image/common/banner/banner5.jpg) 100% 500px;"><a href="javascript:void(0)" target="_blank"></a></li>
+                <li style="background: url(__PUBLIC__/Media/image/common/banner/banner6.jpg) 100% 500px;"><a href="javascript:void(0)" target="_blank"></a></li>
+            </ul>
+            <ol class="slide-triggers">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+
+            <!--  登录框   -->
+            <empty name="user">
+                <div class="loginBox cf">
+                    <div class="loginTit fl">账号登录</div>
+                    <form action="" class="formBox cf fl pr">
+                        <div class="errorMsg a_red"></div>
+                        <div class="eachInput fl accountBox cf" id="accountBox">
+                            <i></i>
+                            <input type="text" id="loginAccount" name="account" class="fl" placeholder="账号">
+                        </div>
+                        <div class="eachInput fl pwdBox cf">
+                            <i></i>
+                            <input type="password" id="pwd" name="password" class="fl" placeholder="密码">
+                        </div>
+                        <div class="operateLogin fl">
+                            <i class="isChose fl active"></i>
+                            <a class="rememberPwd fl">记住密码</a>
+                            <a class="forgetPwd fr" href="{:U('Index/wjmm')}" >忘记密码?</a>
+                        </div>
+                        <a href="javascript:void(0)" class="btnLogin fl" id="btnLogin">登录</a>
+                        <a href="{:U('Public/register')}" class="btnReg fl">立即注册</a>
+                    </form>
+                </div>
+            </empty>
+        </div>
+        <!--  平台福利和推荐游戏  -->
+        <div class="stateARecommendWrap container">
+            <div class="stateRecommend cf">
+                <!--   平台福利     -->
+                <div class="stateWelfare fl cf">
+                    <div class="titleBox cf fl">
+                        <div class="titLeftBox"><p class="fl titName">平台福利</p></div>
+                    </div>
+                    <div class="stateWelfareContent fl">
+                        <ul class="welfareWrap cf">
+                            <li class="subWelfare giftBox">
+                                <a class="welfareLink" href="{:U('Gift/index')}">
+                                    <i></i>
+                                    <p>礼包中心</p>
+                                </a>
+                            </li>
+                            <li class="subWelfare activeBox">
+                                <a class="welfareLink" href="{:U('Exchange/index')}">
+                                    <i></i>
+                                    <p>兑换中心</p>
+                                </a>
+                            </li>
+                            <li class="subWelfare rechargeBox">
+                                <a class="welfareLink" href="{:U('Recharge/chongzhi')}">
+                                    <i></i>
+                                    <p>充值中心</p>
+                                </a>
+                            </li>
+                            <li class="subWelfare customBox">
+                                <a class="welfareLink" href="{:U('Service/kefu')}">
+                                    <i></i>
+                                    <p>客服中心</p>
+                                </a>
+                            </li>
+                            <li class="subWelfare gameBox">
+                                <a class="welfareLink" href="{:U('Game/youxi')}">
+                                    <i></i>
+                                    <p>游戏中心</p>
+                                </a>
+                            </li>
+                            <li class="subWelfare informationBox">
+                                <a class="welfareLink" href="{:U('Category/zixun')}">
+                                    <i></i>
+                                    <p>资讯中心</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--  推荐游戏   -->
+                <div class="recommendGame fl cf">
+                    <div class="titleBox cf fl">
+                        <div class="titLeftBox"><p class="fl titName">推荐游戏</p></div>
+                        <a href="javascript:void(0)" class="moreLink fr">换一组<i></i></a>
+                    </div>
+                    <ul class="recommendContent cf fl">
+                        <volist name="recommend" id="vo" >
+                            <li class="subRecommend active">
+                                <img src="__ROOT__{$vo.cover|get_cover='path'}" class="fl recommendImg">
+                                <div class="fl cf subRecommendDown">
+                                    <p class="gameName fl">{:msubstr($vo['game_name'],0,7,'UTF-8',false)}</p>
+                                    <p class="gameNum fl">推荐指数:
+                                        <i class="gameStar"><span class="percentStar" style="width: {$vo['game_score']*10}%;"></span></i>
+                                    </p>
+                                    <p class="fl operationRecommend">
+                                        <a href="{:U('Game/yxchildren?id='.$vo['id'].'')}" class="btnGift fr ">礼包</a>
+                                        <a href="<if condition='$vo.dow_status eq 0'>#<else/>{:U('Down/down_file?game_id='.$vo['id'].'&type=1')}</if>" class="btnDownload fr">下载</a>
+                                    </p>
+                                </div>
+                                <div class="scanRecommendBox hide">
+                                    <div class="subCodeImg fl"><img src="{:U('Game/dow_url_generate?game_id='.$vo['id'])}" width="100" height="100"></div>
+                                    <div class="scanInstr">
+                                        <p class="downScan">扫描下载</p>
+                                        <p class="typeScan">类型：{$vo.game_type_name}</p>
+                                        <p class="typeScan">大小：{$vo.game_size}</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </volist>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  热门游戏和游戏排行    -->
+        <div class="hotARankWrap container">
+            <div class="hotARank cf">
+                <!--  热门游戏   -->
+                <div class="hotGame fl">
+                    <div class="titleBox cf">
+                        <div class="titLeftBox"><p class="fl titName">全部游戏</p></div>
+                        <a href="{:U('Game/youxi')}" class="moreLink fr">更多&gt;&gt;</a>
+                    </div>
+                    <ul class="allGameContent cf">
+                        <volist name="hot" id="vo" >
+                            <li class="subAllGame cf">
+                                <div class="gameImg fl"><img src="__ROOT__{$vo.icon|get_cover='path'}"></div>
+                                <div class="gameContent fl">
+                                    <p class="subGameName">{:msubstr($vo['game_name'],0,7,'UTF-8',false)}</p>
+                                    <p class="subGameTypeBox">
+                                        <span class="subGameType">{$vo.game_type_name}</span>
+                                        <span>|</span>
+                                        <span class="subGameBig">{$vo.game_size}</span>
+                                    </p>
+                                    <p class="operateBtnBox cf">
+                                        <a href="<if condition='$vo.dow_status eq 0'>#<else/>{:U('Down/down_file?game_id='.$vo['id'].'&type=1')}</if>" class="btnDownLoad fl" >下载</a>
+                                        <a href="{:U('Game/yxchildren?id='.$vo['id'].'')}" class="btnGift fl">礼包</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+                <!--  游戏排行  -->
+                <div class="activeRankBox fl">
+                    <div class="titleBox cf">
+                        <div class="titLeftBox"><i></i><p class="fl titName">游戏排行</p></div>
+                        <a href="{:U('Game/youxi')}" class="moreLink fr">更多&gt;&gt;</a>
+                    </div>
+                    <div class="activeRankContent">
+                        <ul class="activeRankUl cf">
+                            <volist name="rank" id="vo" >
+                                <li class="subActiveRankLi cf">
+                                    <div class="subRankNum <?php if($i<=3){echo 'rankFront';}?> fl">{$i}</div>
+                                    <div class="subRankName fl">{:msubstr($vo['game_name'],0,7,'UTF-8',false)}</div>
+                                    <div class="rankInfo fl cf hide">
+                                        <img src="__ROOT__{$vo.icon|get_cover='path'}" class="rankImg fl"/>
+                                        <div class="rankRight fl">
+                                            <p class="rankNme">{:msubstr($vo['game_name'],0,7,'UTF-8',false)}</p>
+                                            <p class="cf rankOperate">
+                                                <a href="<if condition='$vo.dow_status eq 0'>#<else/>{:U('Down/down_file?game_id='.$vo['id'].'&type=1')}</if>" class="fl btnRankDown" >下载</a>
+                                                <a href="{:U('Game/yxchildren?id='.$vo['id'].'')}" class="fl">礼包</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="subRankType fr">{$vo.game_type_name}</div>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  热门礼包   -->
+        <div class="hotGift container">
+            <div class="titleBox cf">
+                <div class="titLeftBox"><p class="fl titName">热门礼包</p></div>
+                <a href="{:U('Gift/index')}" class="moreLink fr">更多&gt;&gt;</a>
+            </div>
+            <ul class="allGameContent cf">
+                <volist name="gift" id="vo" >
+                    <li class="subAllGame cf">
+                        <div class="gameImg fl">
+                            <img src="__ROOT__{$vo.icon|get_cover='path'}">
+                        </div>
+                        <div class="gameContent fl">
+                            <p class="subGameName" id="{$vo.id}">{$vo.game_name}</p>
+                            <p class="subGameTypeBox"><span class="subGameType" id="{$vo.gift_id}">{$vo.giftbag_name}</span></p>
+                            <p class="operateBtnBox cf">
+                                <a href="javascript:void(0)" class="getGiftBtn cf"><i></i><span>领取</span></a>
+                            </p>
+                        </div>
+                    </li>                            
+                </volist>
+                
+                
+            </ul>
+        </div>
+        <!--  友情链接    -->
+        <div class="friendShipLinkBox container">
+            <div class="titleBox cf">
+                <div class="titLeftBox"><p class="fl titName">友情链接</p></div>
+            </div>
+            <div class="friendShipContent">
+                <ul class="linkContentUl cf">
+                    <volist name=":get_links()" id='data'>
+                        <li class="eachSubLink fl">
+                            <a href="{$data.link_url}" class="linkA" target="_blank">{$data.title}</a>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--   底部    -->
+    <include file="Public/footer" />
+
+<script type="text/javascript">
+   var giftUrl = "{:U('Member/getGameGift')}";
+   var requestUrl  = "{:U('Member/login')}";
+   var upsetUrl  = "{:U('Index/upset_game')}";
+   var codeImg = "__PUBLIC__/Media/image/common/code.png";
+   var yxchildrenUrl = "__MODULE__/Game/yxchildren";
+   var img = "__ROOT__";
+</script>
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/jquery.ext.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/index/index.js"></script>
+<script src="__JS__/login/index.js"></script>
+</body>
+</html>

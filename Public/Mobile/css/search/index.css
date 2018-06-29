@@ -1,0 +1,25 @@
+/*     搜索框       */
+.searchBox{width: 94%;height: 2rem;margin:1rem 3%;line-height: 2rem;border:1px solid #CCC;}
+.searchInput{width: 70%;height: 1.6rem;margin:.2rem 0 0 .5rem;line-height: 1.6rem;border:none;}
+.searchIcon{display: block;width: 1.2rem;height: 1.2rem;margin:.3rem .8rem 0 0;background: url("../../images/search/search.png") no-repeat;background-size: 1.2rem 1.2rem;}
+
+/*     没有搜索的情况      */
+    .nothingBox{text-align: center;margin: 2rem 0;}
+.nothingIcon{display: inline-block;width: 8rem;height: 8rem;margin-bottom: .6rem;}
+.nothingName{width:100%;font-size: .8rem;text-align: center;}
+
+/*     热门搜素       */
+.hotSearchBox{width: 94%;margin: 1rem 3%;}
+.searchTit{width: 100%;height:2rem;line-height:2rem;text-align: left;font-size: .9rem;color: #333;font-weight: bold;border-bottom: 1px solid #CCC;}
+.searchContent{width: 100%;}
+.subSearch{width: 100%;height: 2rem;line-height: 2rem;border-bottom: 1px solid #CCC;}
+.searchName{max-width:7rem;color: #333;margin-right:.9rem;font-size: .9rem;font-weight: bold;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.subTag{font-size: .8rem;margin-left: .5rem;}
+
+/*     有搜索的情况     */
+.subClassify{width:100%;padding:.8rem;border-bottom: 1px solid #F4F4F4;}
+.classifyImg{display:block;width: 3rem;height: 3rem;}
+.classifyNameBox{max-width:4rem;margin-left:.8rem;margin-right:.7rem;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.classifyNameTag{font-size: 1rem;color: #333;}
+.classifyType{width:100%;font-size: .7rem;color: #999;}
+.classifyEnter{display: block;width: 3rem;height: 1.5rem;margin-top:.5rem;margin-right:0;line-height: 1.4rem;font-size:.9rem;text-align: center;background: #E5E5E5;color: #666;border:1px solid #CCC;border-radius: .3rem;}

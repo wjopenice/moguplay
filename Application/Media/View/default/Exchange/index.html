@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+    <style type="text/css">
+        .exChangeBox{display:block;width: 197px;height: 131px;margin: 193px auto 30px auto;}
+        .changeP{width:100%;margin-bottom:195px;color:#666;text-align:center;font-size: 20px;}
+    </style>
+</head>
+<body>
+    <!--  头部   -->
+    <include file="Public/header" />   
+
+    <img src="__IMG__/no-changeCenter.png" class="exChangeBox">
+    <p class="changeP">正在搭建中</p>
+
+    <!--   底部    -->
+    <include file="Public/footer" />
+
+<script type="text/javascript">
+$(function() {
+    $('.checkcode').click(function() {
+        var e = (new Date).getTime();
+        $('.checkcode').attr('src', MODULE+'/Public/verify/t/'+e);
+    });
+    $("#active-code").focus(function(){
+        $(this).parents('label').siblings('.con-tips').html("");
+    });
+    $(".shuru").focus(function(){
+        $(this).parents('label').siblings('.con-tips').html("");
+    });
+   
+
+    
+   $("#active-btn").click(function(){
+    var acode=$.trim($("#active-code").val());
+    var vcode=$.trim($(".shuru").val());
+    if(acode==""){ 
+        $("#active-code").parents('label').siblings('.con-tips').html("请输入兑换码!");
+        return false;
+    }
+    if(vcode==""){
+        $(".shuru").parents('label').siblings('.con-tips').html("请输入验证码!");
+       return false;
+    }
+    // 兑换码的正则要求
+    if( !/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]+$/.test(acode)){
+       $("#active-code").parents('label').siblings('.con-tips').html("您输入的兑换码有误!");
+       return false;
+    }else if(!(/^[a-zA-Z0-9]{4}$/.test(vcode))){
+        $(".shuru").parents('label').siblings('.con-tips').html("验证码格式错误!");
+       return false;
+    }else{
+        $.ajax({
+                type:'post',
+                dataType:'json',
+                data:{
+                    "code":acode,//兑换码
+                    "verify":vcode//验证码
+                },
+                async:false,
+                url:"{:U('Exchange/index')}",
+                success:function(data) {
+                    if (parseInt(data.status) == 1 ) {
+//                    登录成功时候的状态兑换成功
+                        code_sucess_box();
+                    }else if (parseInt(data.status) == 0 ) {
+                        //未登录的状态
+                        code_login_box();
+                    }else if (parseInt(data.status) ==-7 ) {                        
+                        $(".shuru").parents('label').siblings('.con-tips').html(data.msg);
+                    }else {
+                     $("#active-code").parents('label').siblings('.con-tips').html(data.msg);
+                      $('.checkcode').click();
+                    }
+                },
+                error:function() {
+                    alert('服务器故障，请稍候再试。。。。');
+                }
+            });
+    }
+   });
+
+   // 点击兑换记录判断是否登录跳转到兑换记录的页面
+    $(".extab").find(".two").click(function(){
+       $.ajax({
+                type:'post',
+                dataType:'json',              
+                url:"{:U('Exchange/is_login')}",
+                async:false,
+                success:function(data) {
+                    if (parseInt(data.status) == 1 ) {
+//                    登录成功时候的状态
+                   window.location.href="{:U('record')}";
+                    }
+                    if (parseInt(data.status) == 0 ) {
+                        //未登录的状态
+                        code_login_box();
+                    }
+                },
+                error:function() {
+                    alert('服务器故障，请稍候再试。。。。');
+                }
+            }); 
+    });
+
+    // 点击兑换记录触发同样的事件
+    $("#dhjl").click(function(){
+       $(".extab").find(".two").click() ;
+    })
+})
+
+
+  </script>
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/jquery.ext.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+</html>
+</block>

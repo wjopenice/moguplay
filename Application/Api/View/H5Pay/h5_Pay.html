@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>手上支付</title>
+    <link rel="icon" href="__IMG__/favicon.ico"/>
+</head>
+<body>
+
+<div>
+    <span id="msg"></span>
+</div>
+
+</body>
+<script type="text/javascript">
+    var status = "<?php echo $msgArr['status']?>";
+
+    if(status == '0001'){
+        var url = "<?php echo $msgArr['url']?>";
+        //console.log(url);
+        window.location.href = url;
+    }else{
+        var msg = "<?php echo $msgArr['msg']?>";
+        document.getElementById('msg').innerHTML = status + "：" + msg;
+    }
+</script>
+</html>

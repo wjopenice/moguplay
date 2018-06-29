@@ -1,0 +1,21 @@
+/*      接入商页面         */
+.fl{float: left;}
+.cf:after{content:""; clear:both; display:table;}.cf {zoom:1;}
+
+.accessWrap{padding-bottom: 50px;background: #F4F4F4;}
+.container{width: 1200px;margin: 0 auto;}
+.thisPosition{height: 50px;line-height: 50px;font-size:14px;color: #666;}
+.interval{margin: 0 5px;}
+.accessProviderBox{min-height: 511px;padding-bottom:30px;background: #FFF;}
+.accessTit{height: 70px;margin:0 15px;line-height:70px;font-size:18px;font-weight:bold;color: #333;border-bottom: 2px solid #4C9AD0;}
+.accessContent{margin:0 15px;padding-bottom:10px;background: #FFF9ED;}
+.step{margin-left:80px;font-size: 14px;color: #333;}
+.stepNum{height:60px;font-weight: bold;line-height: 60px;}
+.accessULBox{margin: 10px 60px;padding-bottom: 20px;}
+.subAccess{width:200px;height: 40px;margin:0 10px 10px 0;line-height: 40px;color:#999;border:1px solid #CCC;cursor: pointer;}
+.subAccess i{display: block;width:20px;height: 20px;margin:10px 10px 0 10px;background: url(../image/uncheck-radio.png) no-repeat;background-size: 20px 20px;}
+.subAccess.active{color:#4C9AD0;border:1px solid #4C9AD0;}
+.subAccess.active i{background: url(../image/check-radio.png) no-repeat;background-size: 20px 20px;}
+.confirmBtn{display: block;width: 100px;height: 30px;margin:-10px 0 20px 80px;line-height: 30px;text-align: center;color:#FFF;background: #4696CE;}
+
+

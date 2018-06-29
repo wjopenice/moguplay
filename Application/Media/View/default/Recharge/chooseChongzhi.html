@@ -1,0 +1,65 @@
+<extend name="Public/base"/>
+<block name="body">
+<link rel="stylesheet" href="__CSS__/cz_change.css">
+
+    <div class="accessWrap">
+        <div class="thisPosition container"><span>当前位置</span><span class="interval">-</span><span>充值中心</span><span class="interval">-</span><span>支付通道选择</span></div>
+        <div class="accessProviderBox container">
+            <div class="accessTit">请选择接入商</div>
+            <div class="accessContent">
+                <div class="step"><span class="stepNum">步骤1、</span>请选择接入商  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="stepNum">步骤2、</span>然后点击确认去选择支付方式    </div>
+                <div class="accessType">
+                    <ul class="accessULBox cf">
+                        <li class="subAccess fl cf active" id="1">
+                            <i class="fl"></i>
+                            <p class="fl">支付通道1</p>
+                        </li>
+                        <li class="subAccess fl cf" id="2">
+                            <i class="fl"></i>
+                            <p class="fl">支付通道2</p>
+                        </li>
+                        <li class="subAccess fl cf" id="3">
+                            <i class="fl"></i>
+                            <p class="fl">支付通道3</p>
+                        </li>
+                    </ul>
+                </div>
+                <input type="hidden" id="type"  value="1" />
+                <a href="javascript:void(0)" class="confirmBtn">确认</a>
+            </div>
+        </div>
+    </div>
+
+<script src="__JS__/layer/layer.js" type="text/javascript"></script>
+<script type="text/javascript" src="__JS__/jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){
+
+            $(document).on("click",'.subAccess',function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                $("#type").val($(this).attr('id'));
+            });
+
+            //确认 console.log($(this).attr('id'));
+            $(".confirmBtn").on("click", function(){
+                var type = $("#type").val();
+                var url = "{:U('Recharge/chongzhi')}";
+                switch(type){
+                    case '1':
+                      url = "{:U('Recharge/chongzhi')}";
+                      break;
+                    case '2':
+                      url = "{:U('Recharge/ipsChongzhi')}";
+                      break;
+                    case '3':
+                      url = "{:U('Recharge/nowChongzhi')}";
+                      break;
+                }
+                window.location.href = url;
+            });
+        });
+    </script>
+
+</body>
+</html>
+</block>

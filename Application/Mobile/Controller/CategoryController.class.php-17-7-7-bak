@@ -1,0 +1,215 @@
+<?php
+namespace Mobile\Controller;
+use Admin\Model\GameModel;
+
+class CategoryController extends BaseController {
+
+    public function zixun(){
+        $this->notice();
+        $this->activity();
+        $this->announcement();
+        $this->zixun_adv();
+        $this->display();
+    }
+
+
+    /**
+     *游戏资讯
+     */
+    public function notice(){
+        $model = array(
+            'm_name'=>'document',
+            'prefix'=>'sys_',
+            'field' =>'sys_document.id as notice_id,sys_document.cover_id,sys_document.title,sys_document.create_time,sys_document_article.id,sys_document_article.content',
+            'join'	=>'sys_document_article on sys_document.id = sys_document_article.id',
+            'map'   =>array('display'=>1,'category_id' =>42),
+            'order' =>'sys_document.create_time desc',
+            'limit' =>3  ,
+        );
+        if ($_GET['p']) {
+               $p = $_GET['p'];
+            }else{
+                $p=0;
+            }
+        if ($_GET['pagesize']) {
+               $row = $_GET['pagesize'];
+            }else{
+               $row = 10; 
+            }
+        $notice = parent::join_data_page($model,$p,$row);
+        //print_r($notice);exit;
+        if(I('post.type') == 42 || I('post.type') ==''){
+            $this->assign('count',$notice['count']);
+        }
+        unset($notice['count']);
+        $this->assign('notice',$notice);
+    }
+
+    /**
+     *游戏活动
+     */
+    public function activity(){
+        $model = array(
+            'm_name'=>'document',
+            'prefix'=>'sys_',
+            'field' =>'sys_document.id as notice_id,title,cover_id,create_time,sys_document_article.id,content',
+            'join'	=>'sys_document_article on sys_document.id = sys_document_article.id',
+            'map'   =>array('display'=>1,'category_id' =>44),
+            'order' =>'create_time desc',
+            'limit' =>3  ,
+        );
+        if ($_GET['p']) {
+               $p = $_GET['p'];
+            }else{
+                $p=0;
+            }
+        if ($_GET['pagesize']) {
+               $row = $_GET['pagesize'];
+            }else{
+               $row = 10; 
+            }
+      
+        $activity = parent::join_data_page($model,$p,$row);
+        //修改判断，原以post方式接收，现改为get方式  updateby:sunhao20170707
+         if(I('get.type') == 44){
+            $this->assign('count',$activity['count']);
+        }
+        unset($activity['count']);
+        $this->assign('activity',$activity);
+    }
+
+
+    /**
+     *游戏公告
+     */
+    public function announcement(){
+        $model = array(
+            'm_name'=>'document',
+            'prefix'=>'sys_',
+            'field' =>'sys_document.id as notice_id,title,cover_id,create_time,sys_document_article.id,content',
+            'join'	=>'sys_document_article on sys_document.id = sys_document_article.id',
+            'map'   =>array('display'=>1,'category_id' =>43),
+            'order' =>'create_time desc',
+            'limit' =>3  ,
+        );
+        if ($_GET['p']) {
+               $p = $_GET['p'];
+            }else{
+                $p=0;
+            }
+        if ($_GET['pagesize']) {
+               $row = $_GET['pagesize'];
+            }else{
+               $row = 10; 
+            }
+        $announcement = parent::join_data_page($model,$p,$row);
+        //修改判断，原以post方式接收，现改为get方式  updateby:sunhao20170707
+         if(I('get.type') == 43){
+            $this->assign('count',$announcement['count']);
+        }
+        unset($announcement['count']);
+        $this->assign('announcement',$announcement);
+    }
+
+
+    /**
+     *资讯详情
+     */
+    public function zxchildren(){
+
+        $id = $_GET['id'];
+         $Document = D('Document');
+        $info = $Document->detail($id);
+        //print_r($id);exit;
+        $model =  array(
+            'm_name' =>'document',
+            'prefix' =>'sys_',
+            'field'  =>'sys_document.id as uid,title,admin,create_time,sys_document_article.content',
+            'join'	 =>'sys_document_article on sys_document.id = sys_document_article.id',
+            'map'    =>array('sys_document.id' => $id),
+        );
+        $zxchildren = parent::join1_data($model);
+        $this->assign('vo',$zxchildren);
+        $this->assign('info',$info);
+        //print_r($zxchildren);exit;
+        $this->gift();
+        $this->hot();
+        $this->display();
+    }
+
+
+
+        /**
+     *游戏礼包
+     */
+    public function gift(){
+        $model = array(
+            'm_name'=>'Giftbag',
+            'prefix'=>'tab_',
+            'field' =>'tab_giftbag.id as gift_id,game_id,tab_giftbag.game_name,giftbag_name,giftbag_type,tab_game.icon,tab_giftbag.create_time',
+            'join'	=>'tab_game on tab_giftbag.game_id = tab_game.id',
+            'map'   =>array('game_status'=>1),
+            'group' =>'tab_giftbag.game_id',
+            'order' =>'tab_giftbag.id desc',
+            'limit' =>6    ,
+        );
+        $gift = parent::join_data($model);
+       /* echo "<pre>";
+        print_r($gift);exit;
+        echo "</pre>";*/
+        $this->assign('gift',$gift);
+    }
+
+
+    /***
+     *热门游戏
+     */
+    public function hot(){
+        $model = array(
+            'm_name'=>'Game',
+            'prefix'=>'tab_',
+            'map'   =>array('game_status'=>1,'recommend_status'=>2),
+            'field' =>true,
+            'order' =>'sort desc',
+            'limit' =>6,
+        );
+        $hot = parent::list_data($model);
+        $this->assign('hot',$hot);
+    }
+
+    public function news($type='') {
+        if (empty($type)) {return;}
+        $name = 'media_'.$type;
+        $news = M("Document")->field("d.id")->table("__DOCUMENT__ as d")
+            ->join("__CATEGORY__ as c on(c.id=d.category_id and c.name='$name')",'right')
+            ->where("d.status>0 and d.display=1")->find();
+        $this->zxchildren($news['id']);
+    }
+
+    /*
+      *  资讯页广告图
+      *  @author   whh
+      */
+   
+   public function zixun_adv(){
+        $adv = M("Adv","tab_");
+        $map['status'] = 1;
+        $map['pos_id'] = 8; #资讯页广告图id
+        $left_top_zixun= $adv->where($map)->order('sort ASC')->select();
+
+        $map['pos_id'] = 9; #资讯页广告图id
+        $mid_top_zixun= $adv->where($map)->order('sort ASC')->select();
+
+        $map['pos_id'] = 10; #资讯页广告图id
+        $rig_top_zixun= $adv->where($map)->order('sort ASC')->select();
+
+        $map['pos_id'] = 11; #资讯页广告图id
+        $adv_zixun= $adv->where($map)->order('sort ASC')->select();
+        //file_put_contents('E:/aaa.html',json_encode($left_top_zixun.'-----'.$mid_top_zixun.'-----'.$rig_top_zixun.'-----'.$adv_zixun));
+        $this->assign("left_top",$left_top_zixun);
+        $this->assign("mid_top",$mid_top_zixun);
+        $this->assign("rig_top",$rig_top_zixun);
+        $this->assign("adv_zixun",$adv_zixun);
+    }
+
+}

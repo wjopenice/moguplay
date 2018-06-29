@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>我的游戏</title>
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/myGame/index.css">
+</head>
+<body class="mHome">
+
+    <div class="page-group cf">
+        <!--  标题  -->
+        <div class="gameTit fl">
+            <p class="gameTitName">最近玩过的游戏</p>
+        </div>
+
+        <if condition="$count eq 0">
+            <div class="giftNull ">
+                <p class="aLanguage">骚年，你还没有游戏记录，赶快去玩耍吧！</p>
+                <img class="no-Img" src="__PUBLIC__/Mobile/images/giftsDetails/no-game.png" alt="">
+            </div>
+        <else/>
+            <!--  游戏内容  -->
+            <div class="eachGameType cf fl">
+                <div class="gameTypeTit fl">
+                    棋牌类
+                    <a href="javascript:void(0)" class="right"></a>
+                </div>
+                <ul class="gameBox fl cf">
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="eachGameType cf fl">
+                <div class="gameTypeTit fl">
+                    棋牌类
+                    <a href="javascript:void(0)" class="right"></a>
+                </div>
+                <ul class="gameBox fl cf">
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                    <li class="eachGame fl cf">
+                        <div class="gameImg fl"><img src="__PUBLIC__/Mobile/images/myGame/gameImg.png" alt=""></div>
+                        <div class="operateGame fl cf">
+                            <a href="javascript:void(0)" class="getGift fl eachOperate">领取礼包</a>
+                            <a href="javascript:void(0)" class="startGame fr eachOperate">开始游戏</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </if>
+    </div>
+
+    <!--   底部导航栏   -->
+    <nav class="bar bar-tab">
+        <a class="tab-item external footTap-game" href="{:U('Index/index')}">
+            <span class="icon"></span>
+            <span class="tab-label">游戏</span>
+        </a>
+        <a class="tab-item external footTap-info" href="{:U('Category/zixun')}">
+            <span class="icon"></span>
+            <span class="tab-label">资讯</span>
+        </a>
+        <a class="tab-item external footTap-center active" href="{:U('Member/personalcenter')}">
+            <span class="icon"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </nav>
+    <script src="__JS__/zepto.min.js"></script>
+    <script src="__JS__/sm-extend.min.js"></script>
+</body>
+</html>
+

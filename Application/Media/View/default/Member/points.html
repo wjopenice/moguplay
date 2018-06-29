@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>个人中心-交易记录</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/personalCenter/common.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+
+<!--  头部   -->
+<include file="Public/header" />
+
+<!--  个人中心的主内容    -->
+<div class="homeMain">
+    <div class="personalBarBox">
+        <div class="personalBar container">
+            <ul class="subPersonalUl cf">
+                <li class="subPersonalBar fl baseInfo"><a class="link" href="{:U('Member/personalcenter')}"><i></i><p>基本信息</p></a></li>
+                <li class="subPersonalBar fl safeCenter "><a class="link" href="{:U('Member/pcsafecenter')}"><i></i><p>安全中心</p></a></li>
+                <li class="subPersonalBar fl infoCenter"><a class="link" href="{:U('Member/pcmessage')}"><i></i><p>信息中心</p></a></li>
+                <li class="subPersonalBar fl transactionRecord active"><a class="link" href="{:U('Member/pctrade')}"><i></i><p>交易记录</p></a></li>
+                <li class="subPersonalBar fl accountBalance"><a class="link" href="{:U('Member/pcaccountyue')}"><i></i><p>账户余额</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   基本信息的内容     -->
+    <div class="contentBoxWrap container baseInfoContent">
+        <div class="contentTitBox cf">
+            <p class="contentTit fl transactionRecord">交易记录</p>
+        </div>
+        <div class="contentWrap cf">
+            <div class="linkBox fl">
+                <ul class="cf">
+                    <li class="recordUl "><a href="{:U('pctrade')}">充值记录</a></li>
+                    <li class="recordUl"><a href="javascript:void(0)">消费记录</a></li>
+                    <li class="recordUl active"><a href="{:U('points')}">积分记录</a></li>
+                </ul>
+            </div>
+            <div class="recordContent fl">
+                <div class="subRecordContent">
+                    <p class="latestRecord">最近10笔积分获取记录</p>
+                    <div class="form cf">
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">时间</li>
+                            <li class="li1">充值金额</li>
+                            <li class="li2">充值方式</li>
+                            <li class="li3">充值时间</li>
+                        </ul>
+                        <ul class="eachLine cf fl rechargeUl">
+                            <volist name='list_data' id="vo">
+                                <li class="li0">{$vo.create_time|date='Y-m-d H:i:s',###}</li>
+                                <li class="li1">{$vo.amount}元</li>
+                                <li class="li2">
+                                    <switch name="vo['pay_way']" >
+                                        <case value="0">平台币充值</case>
+                                        <case value="1">支付宝充值</case>
+                                        <case value="2">微信充值</case>
+                                        <case value="3">网银充值</case>
+                                        <case value="4">新手任务</case>
+                                        <case value="5">每日签到</case>
+                                        <case value="6">每日分享</case>
+                                        <default />其他
+                                    </switch> </li>
+                                <li class="li3">{$vo.points}分</li>
+                           </volist>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   底部    -->
+<include file="Public/footer" />
+
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/personalCenter/common.js"></script>
+</body>
+</html>

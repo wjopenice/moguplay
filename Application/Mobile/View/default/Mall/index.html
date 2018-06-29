@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>商城</title>
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/sm-extend.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/mall/index.css">
+</head>
+<body class="mHome">
+
+    <!--  加载层   -->
+    <div id="loader">
+        <div class="loaderInner">
+            <img src="__PUBLIC__/Mobile/images/index/logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="page-group">
+
+        <!--   商城banner    -->
+        <!--<div class="mallBanner">
+            <img src="__PUBLIC__/Mobile/images/mall/mallBanner.png" alt="">
+        </div>-->
+        <div class="swiper-container" data-space-between='10'>
+            <div class="swiper-wrapper slide-banner_uc">
+                <div class="swiper-slide"><a href="javascript:void(0)"><img src="__PUBLIC__/Mobile/images/mall/mallBanner1.png"></a></div>
+                <div class="swiper-slide"><a href="javascript:void(0)"><img src="__PUBLIC__/Mobile/images/mall/mallBanner2.png"></a></div>
+                <div class="swiper-slide"><a href="javascript:void(0)"><img src="__PUBLIC__/Mobile/images/mall/mallBanner3.png"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!--   小导航    -->
+        <div class="mallNavBar cf">
+            <div class="subNav fl cf myScore">
+                <a class="navLink" href="{:U('Member/pointstask')}">
+                    <img class="navLinkIcon" src="__PUBLIC__/Mobile/images/mall/myScore.png" alt="">
+                    <p class="fl navName">我的积分</p>
+                </a>
+            </div>
+            <div class="subNav fl cf myChange">
+                <a class="navLink" href="javascript:void(0)">
+                    <img class="navLinkIcon" src="__PUBLIC__/Mobile/images/mall/myChange.png" alt="">
+                    <p class="fl navName">我的兑换</p>
+                </a>
+            </div>
+            <div class="subNav fl cf luckDraw">
+                <a class="navLink" href="javascript:void(0)">
+                    <img class="navLinkIcon" src="__PUBLIC__/Mobile/images/mall/draw.png" alt="">
+                    <p class="fl navName">幸运抽奖</p>
+                </a>
+            </div>
+        </div>
+
+        <!--   tab栏   -->
+        <div class="mallTab cf">
+            <a class="subTab active" href="javascript:void(0)">精选</a>
+            <a class="subTab" href="javascript:void(0)">实物</a>
+            <a class="subTab" href="javascript:void(0)">礼包</a>
+            <a class="subTab" href="javascript:void(0)">我能兑换</a>
+        </div>
+
+        <!--   tab内容栏    -->
+        <div class="mallTabContentBox">
+            <!--   精选的内容    -->
+            <div class="subMallContent">
+                <ul class="choiceBox cf">  
+                    <volist name='recommend_gift' id='v'>
+                        <!-- <a href="{:U('Game/yxchildren?id='.$v['id'].'')}" class="pic">
+                        </a> -->    
+                        <li class="eachChoice cf">
+                            <img src="__ROOT__{$v.gift_icon|get_cover='path'}" alt="" class="fl choiceImg">
+                            <div class="choiceSome fl cf">
+                                <p class="choiceName fl">{:msubstr($v['giftbag_name'],0,6,'UTF-8',false)}</p>
+                                <p class="choiceScore fl">2000积分</p>
+                            </div>
+                            <a class="btnChange fl" href="javascript:void(0)">兑换</a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <!--   实物的内容     -->
+            <div class="subMallContent noGoods hide">
+                <i class="noGoodsIcon"></i>
+                <p class="noGoodsIn">程序员哥哥正在搭建中</p>
+            </div>
+            <!--   礼包的内容   -->
+            <div class="subMallContent noGoods hide">
+                <i class="noGiftIcon"></i>
+                <p class="noGiftIn">暂无礼包哦，客官耐心等待</p>
+            </div>
+            <!--   我能兑换的内容    -->
+            <div class="subMallContent hide">
+                <if condition="$mycount eq 0">
+                    <i class="noGiftIcon"></i>
+                    <p class="noGiftIn">暂无兑换哦</p>
+                <else/>
+                    <ul class="choiceBox cf">
+                        <volist name='mygifts' id='v'>
+                            <!-- <a href="{:U('Game/yxchildren?id='.$v['id'].'')}" class="pic">
+                            </a> -->
+                            <li class="eachChoice cf">
+                                <img src="__ROOT__{$v.gift_icon|get_cover='path'}" alt="" class="fl choiceImg">
+                                <div class="choiceSome fl cf">
+                                    <p class="choiceName fl">{:msubstr($v['giftbag_name'],0,6,'UTF-8',false)}</p>
+                                    <p class="choiceScore fl">2000积分</p>
+                                </div>
+                                <a class="btnChange fl" href="javascript:void(0)">兑换</a>
+                            </li>
+                        </volist>
+                    </ul>
+                </if>
+
+
+
+            </div>
+        </div>
+
+        <!--   底部导航栏   -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external footTap-game" href="{:U('Index/index')}">
+                <span class="icon"></span>
+                <span class="tab-label">游戏</span>
+            </a>
+            <a class="tab-item external footTap-mall active" href="{:U('Mall/index')}">
+                <span class="icon"></span>
+                <span class="tab-label">商城</span>
+            </a>
+            <a class="tab-item external footTap-center" href="{:U('Member/personalcenter')}">
+                <span class="icon"></span>
+                <span class="tab-label">我</span>
+            </a>
+        </nav>
+
+    </div>
+
+
+<script src="__JS__/zepto.min.js"></script>
+<script src="__JS__/sm.min.js"></script>
+<script src="__JS__/sm-extend.min.js"></script>
+<script src="__JS__/main.js"></script>
+<script src="__JS__/mall/index.js"></script>
+<script>
+    $(document).on("click",'.luckDraw',function(){
+        $.alert("幸运抽奖暂未开通", function(){})
+    });
+    $(document).on("click",'.myChange',function(){
+        $.alert("我的兑换暂未开通", function(){})
+    });
+</script>
+</body>
+</html>

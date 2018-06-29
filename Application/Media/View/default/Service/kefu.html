@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>客服中心</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/customerService/index.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+    <!-- 公共头部 -->
+    <include file="Public/header" />
+
+    <!-- 客服中心内容 -->
+    <div class="customer">
+        <div class="container customerContent">
+            <div class="work cf">
+                <a class="fl" href="javascript:;"><img src="__PUBLIC__/Media/image/customerService/customerService.png" width="800" height="300" alt=""></a>
+                <div class="workTime fr">
+                    <img class="dib" src="__PUBLIC__/Media/image/customerService/customerIcon.png" width="60" height="62" alt="">
+                    <p >工作时间 ：10:00 -- 21:00</p>
+                    <p>服务热线 ：010-85655922</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;18301467532</p>
+                    <p>客服QQ ：2305194405</p>
+                </div>
+            </div>
+            <div class="problem cf">
+                <a class="passwordIcon fl" href="{:U('Service/kefu_detail?on=mm')}"><img class="dib" src="__PUBLIC__/Media/image/customerService/passwordIcon.png" width="52" height="62" alt=""><p>密码问题</p></a>
+                <a class="packageIcon fl" href="{:U('Service/kefu_detail?on=lb')}"><img class="dib" src="__PUBLIC__/Media/image/customerService/packageIcon.png" width="63" height="63" alt=""><p>礼包问题</p></a>
+                <a class="rechargeIcon fl" href="{:U('Service/kefu_detail?on=cz')}"><img class="dib" src="__PUBLIC__/Media/image/customerService/rechargeIcon.png" width="62" height="64" alt=""><p>充值问题</p></a>
+                <a class="accountIcon fr" href="{:U('Service/kefu_detail?on=zh')}"><img class="dib" src="__PUBLIC__/Media/image/customerService/accountIcon.png" width="62" height="62" alt=""><p>账户问题</p></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 公共尾部 -->
+    <include file="Public/footer" />
+
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/customerService/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* 登录module */
+.signIn{position:relative;height: 600px;width: 100%;min-width: 1200px;background: url("../../Image/login/sign_banner.png") no-repeat center;background-size: 100% 600px;}
+.loginBox{top:110px;right: 360px;}
+.isChose{margin-top: 12px;}
+.operateLogin a{margin-top: 12px;}
+
+/* 忘记密码 */
+.forgetPwd{margin-top: 15px;}
+.chose{display:inline-block;width:20px;height: 20px;border:1px solid #FFF;}
+.chose.active{background: url("../../Image/login/choice.png") no-repeat center;}
+.forgetPwd .fl span{color:#FFF;vertical-align: middle;margin-left: 4px;}
+.forgetPwd .fr{vertical-align: middle;color: #fff;}
+.loginButton{margin-top: 16px;height: 48px;line-height: 48px;text-align: center;background: url("../../Image/login/sign_small_bg.png") no-repeat center;background-size: 100%;}
+.loginButton a{background: none;border: none;color: #fff;font-size: 18px;display: block;}
+.noUserName{text-align: center;font-size: 16px;padding: 10px 0;}
+.noUserName .noUser{color: #fff;}
+.loginContent .userName{margin-top: 0;}
+.btnForgetPwd:hover{text-decoration: underline;}
+
+/*   错误提示    */
+.errorMsg{height:24px;line-height:16px;color: #F62D2D;}

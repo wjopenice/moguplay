@@ -1,0 +1,108 @@
+<!--公共头部-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{:C('PC_SET_TITLE')}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="{:C('WEB_SITE_KEYWORD')}">
+    <meta name="description" content="{:C('WEB_SITE_DESCRIPTION')}">
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/sm-extend.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/index/index.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?bc19aa51515f215def6b091f540c83ea";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- 如果是个人中心则显示个人中心的导航 -->
+</head>
+<body class="mHome">
+
+    <div class="page-group">
+        <!--   导航栏   -->
+        <div class="topBar cf">
+            <div class="logoLeft fl cf"><img class="logoImg fl" src="./Static/images/index/logo.png"/><p class="fl">手上科技</p></div>
+            <div class="logoRight fr">
+                <!--  未登录   -->
+                <div class="status-unLogin" style="display:none;">
+                    <a class="btn-login" href="">登录</a>
+                    <a class="btn-register" href="">注册</a>
+                </div>
+
+                <!--  已登录  -->
+                <div class="status-login cf">
+                    <img class="headImg fl" src=""/>
+                    <p class="headName fl">刁薇笑</p>
+                </div>
+            </div>
+        </div>
+<!--导航-->
+
+<div class="header clearfix" id="navBar">
+    <div class="center">
+        <h1 class="header-l">
+             <a href="{:U('Index/index')}" class="logo"><img src="__IMG__/header/logo.jpg" alt="手上科技"></a>
+        </h1>
+        <div class="header-c">
+            <ul class="list">
+                <li><span class="menu-1" ></span><a href="{:U('Index/index')}" >首页</a> </li>
+                <li><span class="menu-2"></span><a href="{:U('Game/youxi')}">游戏中心</a></li>
+                <li><span class="menu-3"></span><a href="{:U('Gift/index')}">礼包中心</a></li>
+                <li><span class="menu-7"></span><a href="{:U('Exchange/index')}">兑换中心</a>
+                </li>
+                <li><span class="menu-4"></span><a href="{:U('Category/zixun')}">资讯中心</a></li>
+                <li><span class="menu-5"></span><a href="{:U('Recharge/chongzhi')}">充值中心</a></li>
+                <li><span class="menu-6"></span><a href="{:U('Service/kefu')}">客服中心</a></li>
+
+            </ul>
+        </div>
+        <div class="header-r">
+            <input  class="sousuo" type="text" placeholder="请输入关键词" id="com_input" />
+            <span class="icon-search" id="com_search"></span></div>
+    </div>
+
+</div>
+</div>
+<if condition="CONTROLLER_NAME eq Member" >
+<!--banner 区域-->
+<div class="pc_banner">
+    <div class="container">
+      <!--   <p>当前位置：个人中心</p> -->
+    </div>
+</div>
+
+<!--个人中心的内容部分-->
+
+<div class="pc_main">
+        <div id="pc_main_title_bg">
+        <div id="pc_main_title">
+            <ul class="container" >
+                <li><a href="{:U('Member/personalcenter')}"><img src="__IMG__/personalcenter/baseinfo/jibenxinxi_1.png"/></a></li>
+                <li><a href="{:U('Member/pcsafecenter')}"><img src="__IMG__/personalcenter/baseinfo/anquanzhongxin_2.png"/></a></li>
+                <li><a href="{:U('Member/pcmessage')}"><img src="__IMG__/personalcenter/baseinfo/xinxizhongxin_2.png"/></a></li>
+                <li><a href="{:U('Member/pctrade')}"><img src="__IMG__/personalcenter/baseinfo/jiaoyijilv_1.png"/></a></li>
+                <li class="last"><a href="{:U('Member/pcaccountyue')}"><img src="__IMG__/personalcenter/baseinfo/zhanghuyue_1.png"/></a></li>
+            </ul>
+        </div>
+    </div>
+    <else />
+</if>
+
+
+<script src="__JS__/zepto.min.js"></script>
+<script src="__JS__/sm.min.js"></script>
+<script src="__JS__/sm-extend.min.js"></script>
+<script src="__JS__/index/index.js"></script>
+
+<block name="body"></block>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>账号绑定</title>
+    <link rel="stylesheet" href="../Static/Css/sm.min.css">
+    <link rel="stylesheet" href="../Static/Css/public.css">
+    <link rel="stylesheet" href="../Static/Css/bindPhone/bindPhone.css">
+</head>
+<body>
+
+    <!--  加载层   -->
+    <div id="loader">
+        <div class="loaderInner">
+            <img src="../Static/images/index/logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="page-group">
+        <!--  绑定账号头部声明  -->
+        <div class="headText">
+            <p class="call f16">尊敬的中宝珠宝</p>
+            <p class="notice">为了您的账号安全，请您先注册<span>新的手上科技平台账号</span>，并与您当前登录的QQ账号进行绑定。</p>
+            <p class="matter f15">*目前暂不支持绑定手上科技平台老账号</p>
+        </div>
+
+        <!-- tap切换手机账号和个性账号 -->
+        <div class="buttons-tab">
+            <a href="#tab1" class="tab-link active button">绑定手机账号</a>
+            <a href="#tab2" class="tab-link button">绑定邮箱账号</a>
+        </div>
+
+        <!--  form表单  -->
+        <form action="" class="cont">
+            <div class="content-block">
+                <div class="tabs">
+
+                    <!-- 绑定手机账号 -->
+                    <div id="tab1" class="tab active">
+                        <div class="account"><input class="inputSty" id="account" type="text" placeholder="请输入账号"></div>
+                        <div class="username"><input class="inputSty" id="phone" type="number" placeholder="请输入手机号码"></div>
+                        <div class="pwd"><input class="inputSty" id="phonePwd" type="text" placeholder="密码：6-20位字母、数字、特殊字符" maxlength="20"></div>
+                        <div class="code">
+                            <input class="inputSty inputCode fl" type="password" id="input-code" maxlength="6" placeholder="请输入短信验证码">
+                            <input class="btn-code fr f16" id="btn-code" type="button" value="获取验证码"/>
+                        </div>
+                    </div>
+
+                    <!-- 绑定邮箱 -->
+                    <div id="tab2" class="tab">
+                        <div class="username"><input class="inputSty" type="text" placeholder="请输入邮箱"></div>
+                        <div class="pwd"><input class="inputSty" id="bindMailPwd" type="text" maxlength="20" placeholder="密码：6-20位字母、数字、特殊字符"></div>
+                        <div class="pwd"><input class="inputSty" id="bindMailConfirmPwd" type="text" maxlength="20" placeholder="请确认密码"></div>
+                    </div>
+                </div>
+                <div class="btn-loginBox">
+                    <a href="javascript:void(0)" class="btnReg" id="btn-bind">绑定</a>
+                </div>
+            </div>
+        </form>
+
+        <!--   底部导航栏   -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external footTap-game" href="./../index.html">
+                <span class="icon"></span>
+                <span class="tab-label">游戏</span>
+            </a>
+            <a class="tab-item external footTap-mall" href="./../View/information.html">
+                <span class="icon"></span>
+                <span class="tab-label">商城</span>
+            </a>
+            <a class="tab-item external footTap-center active" href="personalCenter.html">
+                <span class="icon"></span>
+                <span class="tab-label">我</span>
+            </a>
+        </nav>
+    </div>
+
+<script src="../Static/Js/zepto.min.js"></script>
+<script src="../Static/Js/sm.min.js"></script>
+<script src="../Static/Js/main.js"></script>
+<script src="../Static/Js/bindPhone/index.js"></script>
+</body>
+</html>

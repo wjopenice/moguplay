@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>礼包中心详情</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/giftsCenter/detail.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+</head>
+<body>
+<!--  头部   -->
+<include file="Public/header" />
+
+<!--  礼包详情   -->
+<div class="homeMain ">
+    <div class="giftDetailContent container">
+        <!--  详情位置    -->
+        <div class="positionIntroduce cf">
+            <p class="fl">当前位置</p>
+            <p class="fl intervalPosition">-</p>
+            <a href="javascript:void(0)" class="fl positionLink">礼包中心</a>
+            <p class="fl intervalPosition">-</p>
+            <a href="javascript:void(0)" class="fl positionLink">{$vo.game_name}</a>
+        </div>
+        <!--  礼包详情   -->
+        <div class="giftContent cf">
+            <div class="giftDetailLeft fl">
+                <div class="giftHeadWrap cf">
+                    <img src="__ROOT__{$vo.icon|get_cover='path'}" alt="" width="150" height="150" class="fl giftHead">
+                    <div class="giftHeadIntroduce fl cf">
+                        <p class="gameName fl">{$vo.game_name}</p>
+                        <p class="gameSome fl">类型：{$vo.game_type_name}</p>
+                        <p class="gameSome fl">大小：{$vo.game_size}</p>
+                        <p class="gameSome fl">版本 ：{$vo.version}</p>
+                        <p class="gameSome fl">时间 ：{$vo.create_time|date="Y-m-d",###}</p>
+                    </div>
+                     <div class="qRCode fr cf">
+                        <img class="codeImg" src="{:U('Game/dow_url_generate?game_id='.$vo['id'])}" alt="" width="77" height="77">
+                        <p class="qRCodeIntroduce cl">扫码下载</p>
+                    </div> 
+                </div>
+                <div class="gameDetailWrap">
+                    <div class="gameDetailTit">游戏详情</div>
+                    <div class="gameDetailContent">
+                        {$vo.introduction}
+                    </div>
+                    <div class="gameTab cf">
+                        <p class="fl eachGameTab active">游戏图片</p>
+                        <p class="fl eachGameTab">游戏礼包</p>
+                    </div>
+                    <div class="gameDetail">
+                        <div class="gameImgBoxWrap gameDetailBox slide-box">
+                            <ul class="slide-content">
+                                <volist name=":explode(',',$vo['screenshot'])" id='pid'>
+                                    <if condition='!empty($pid)'>
+                                        <div class="spic" >
+                                            <li style="background: url('{$pid|get_cover='path'}') 200px 300px;"><a href="javascript:void(0)" target="_blank"></a></li>
+                                        </div>
+                                    </if>
+                                </volist>
+                            </ul>
+                            <div class="slide-btns">
+                                <div class="prev"></div>
+                                <div class="next"></div>
+                            </div>
+                        </div>
+                        <div class="gameGiftBoxWrap gameDetailBox hide">
+                            <empty name="giftdetail">
+                                <!-- 暂无礼包 -->
+                                <div class="gameGiftImg ">
+                                    <img class="dib" src="__IMG__/giftsCenter/gameNoneGift.png" alt="">
+                                    <p class="gameGiftImgTitle">该游戏暂无礼包，敬请期待！</p>
+                                </div>
+                            <else />
+                                <div class="gameGiftBoxList">
+                                     <ul class="cf">
+                                        <volist name="giftdetail" id="vo" >
+                                            <li class="fl cf">
+                                                <p class="gameGiftBoxTitle">
+                                                    {$vo.giftbag_name} - {$vo.game_name}
+                                                </p>
+                                                <p class="gameGiftBoxDetail" title="{$vo.desribe}" id="{$vo.gift_id}">     {$vo.desribe}
+                                                </p>
+                                                <p class="gameGiftBoxTimer">
+                                                    <span>{$vo.start_time|date="Y-m-d",###}</span> 至 <span>{$vo.end_time|date="Y-m-d",###}</span>
+                                                    <a class="gameGiftBtn dib fr" href="javascript:;">领 取</a>
+                                                    <!-- <a class="hide gameGiftReceived dib gameGiftBtn fr" href="javascript:;">已 领 取</a> -->
+                                                </p>
+                                            </li>
+                                        </volist>
+                                    </ul>
+                                </div>
+                            </empty> 
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="activeRankBox fl">
+                <div class="rankBox">
+                    <div class="titleBox cf">
+                        <div class="titLeftBox"><p class="fl titName">热门礼包</p></div>
+                    </div>
+                    <div class="activeRankContent">
+                        <ul class="activeRankUl cf">
+                            <volist name="recommend_gift" id="vo" >
+                                <li class="subActiveRankLi">
+                                    <div class="rankInfo cf">
+                                        <img src="__ROOT__{$vo.gift_icon|get_cover='path'}" height="66" width="66" class="rankImg fl"/>
+                                        <div class="rankRight fl">
+                                            <p class="rankNme">{$vo.giftbag_name}-{$vo.game_name}</p>
+                                            <p class="rankText" id="{$vo.gift_id}">{$vo.desribe}</p>
+                                        </div>
+                                        <p class="rankOperate fr"><a href="javascript:void(0)" class="fl btnRankDown">领取</a></p>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+                <!--  游戏排行  -->
+                <div class="gameRank">
+                    <div class="titleBox cf">
+                        <div class="titLeftBox"><p class="fl titName">热门游戏</p></div>
+                        <a href="{:U('Game/yx_fenlei')}" class="moreLink fr">更多</a>
+                    </div>
+                    <div class="activeGameRankContent">
+                        <ul class="activeGameRankUl cf">
+                            <volist name="rank" id="vo" >
+                                <li class="subActiveGameRankLi cf">
+                                    <div class="subGameRankNum gameRankFront fl <?php if($i>=4){?>gameRankFrontGray<?php }?>">{$i}</div>
+                                    <div class="subGameRankName fl">{$vo.game_name}</div>
+                                    <div class="gameRankInfo fl cf hide">
+                                        <img src="__ROOT__{$vo.icon|get_cover='path'}" class="rankGameImg fl"/>
+                                        <div class="gameRankRight fl">
+                                            <p class="gameRankNme">{$vo.game_name}</p>
+                                            <p class="cf gameRankOperate"><a href="<if condition='$vo.dow_status eq 0'>#<else/>{:U('Down/down_file?game_id='.$vo['id'].'&type=1')}</if>" class="fl btnGameRankDown">下载</a><a href="{:U('Game/yxchildren?id='.$vo['id'].'')}" class="fl">礼包</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="subGameRankType fr">{$vo.game_type_name}</div>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   底部    -->
+<include file="Public/footer" />
+
+<script type="text/javascript">
+    var giftUrl = "{:U('Member/getGameGift')}";
+</script>
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/jquery.ext.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/giftsCenter/detail.js"></script>
+</body>
+</html>

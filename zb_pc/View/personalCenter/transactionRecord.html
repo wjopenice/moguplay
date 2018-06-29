@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>个人中心-交易记录</title>
+    <meta name="description" content="堡庆科技">
+    <link rel="stylesheet" href="../../Static/Css/common/base.css">
+    <link rel="stylesheet" href="../../Static/Css/common/public.css">
+    <link rel="stylesheet" href="../../Static/Css/personalCenter/common.css">
+</head>
+<body>
+
+<!--  头部   -->
+<div class="header" id="header"></div>
+
+<!--  个人中心的主内容    -->
+<div class="homeMain">
+    <div class="personalBarBox">
+        <div class="personalBar container">
+            <ul class="subPersonalUl cf">
+                <li class="subPersonalBar fl baseInfo"><a class="link" href="../../View/personalCenter/baseInfo.html"><i></i><p>基本信息</p></a></li>
+                <li class="subPersonalBar fl safeCenter"><a class="link" href="../../View/personalCenter/safeCenter.html"><i></i><p>安全中心</p></a></li>
+                <li class="subPersonalBar fl infoCenter"><a class="link" href="../../View/personalCenter/infoCenter.html"><i></i><p>信息中心</p></a></li>
+                <li class="subPersonalBar fl transactionRecord active"><a class="link" href="../../View/personalCenter/transactionRecord.html"><i></i><p>交易记录</p></a></li>
+                <li class="subPersonalBar fl accountBalance"><a class="link" href="../../View/personalCenter/accountBalance.html"><i></i><p>账户余额</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--   基本信息的内容     -->
+    <div class="contentBoxWrap container baseInfoContent">
+        <div class="contentTitBox cf">
+            <p class="contentTit fl transactionRecord">交易记录</p>
+        </div>
+        <div class="contentWrap cf">
+            <div class="linkBox fl">
+                <ul class="cf">
+                    <li class="recordUl active"><a href="javascript:void(0)">充值记录</a></li>
+                    <li class="recordUl"><a href="javascript:void(0)">消费记录</a></li>
+                    <li class="recordUl"><a href="javascript:void(0)">积分记录</a></li>
+                </ul>
+            </div>
+            <div class="recordContent fl">
+                <div class="subRecordContent">
+                    <div class="stateBox cf">
+                        <a href="javascript:void(0)" class="platform active">平台币</a>
+                        <a href="javascript:void(0)" class="platform">绑定平台币</a>
+                    </div>
+                    <div class="recordOperationBar">
+                        <p class="fl rechargeTime">充值时间：</p>
+                        <input type="text" class="fl startTime" value="开始时间">
+                        <p class="fl timeInterval"> -- </p>
+                        <input type="text" class="fl endTime" value="结束时间">
+                        <select class="fl choseGame">
+                            <option value="">选择游戏</option>
+                        </select>
+                        <select class="fl rechargeType">
+                            <option value="">充值方式</option>
+                        </select>
+                        <a href="javascript:void(0)" class="fr btnSearch">搜索</a>
+                    </div>
+                    <div class="form cf">
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">序号</li>
+                            <li class="li1">金额（元）</li>
+                            <li class="li2">充值方式</li>
+                            <li class="li3">充值时间</li>
+                        </ul>
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">1</li>
+                            <li class="li1">1000元</li>
+                            <li class="li2">微信充值</li>
+                            <li class="li3">2018-3-21</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subRecordContent hide">
+                    <div class="stateBox cf">
+                        <a href="javascript:void(0)" class="platform active">平台币</a>
+                        <a href="javascript:void(0)" class="platform">绑定平台币</a>
+                    </div>
+                    <div class="recordOperationBar">
+                        <p class="fl rechargeTime">充值时间：</p>
+                        <input type="text" class="fl startTime" value="开始时间">
+                        <p class="fl timeInterval"> -- </p>
+                        <input type="text" class="fl endTime" value="结束时间">
+                        <select class="fl choseGame">
+                            <option value="">选择游戏</option>
+                        </select>
+                        <select class="fl rechargeType">
+                            <option value="">充值方式</option>
+                        </select>
+                        <a href="javascript:void(0)" class="fr btnSearch">搜索</a>
+                    </div>
+                    <div class="form cf">
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">序号</li>
+                            <li class="li1">金额（元）</li>
+                            <li class="li2">充值方式</li>
+                            <li class="li3">充值时间</li>
+                        </ul>
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">1</li>
+                            <li class="li1">1000元</li>
+                            <li class="li2">微信充值</li>
+                            <li class="li3">2018-3-21</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subRecordContent hide">
+                    <p class="latestRecord">最近有10笔积分获取记录</p>
+                    <div class="form cf">
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">时间</li>
+                            <li class="li1">充值金额</li>
+                            <li class="li2">充值方式</li>
+                            <li class="li3">充值时间</li>
+                        </ul>
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">2018-3-10</li>
+                            <li class="li1">1000元</li>
+                            <li class="li2">微信充值</li>
+                            <li class="li3">1000分</li>
+                        </ul>
+                        <ul class="eachLine cf fl rechargeUl">
+                            <li class="li0">2018-3-10</li>
+                            <li class="li1">1000元</li>
+                            <li class="li2">微信充值</li>
+                            <li class="li3">1000分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   底部    -->
+<div class="footer cf" id="footer"></div>
+
+<script src="../../Static/Js/common/jquery.js"></script>
+<script src="../../Static/Js/common/public.js"></script>
+<script src="../../Static/Js/personalCenter/common.js"></script>
+</body>
+</html>

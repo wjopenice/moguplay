@@ -1,0 +1,57 @@
+/* 客服中心背景 */
+.customerContent{width: 100%;height: 500px;background: url("../../Image/customerService/serviceBg.png") no-repeat center;margin-bottom: 210px;}
+
+/* 密码问题 */
+.customerProblem{padding-top: 300px;width: 1366px;margin: 0 auto;}
+.problem{-moz-box-shadow:0 0 9px #6b6b6b; -webkit-box-shadow:0 0 9px #6b6b6b; box-shadow:0 0 9px #6b6b6b;margin-right: 28px;width: 320px;height: 330px;}
+.problem h3{width: 320px;height: 80px;text-align: center;line-height: 80px;color: #fff;font-size: 26px;font-weight: 500;letter-spacing: 1px;}
+.problemText{width: 280px;height: 190px;background: #fff;padding: 20px;}
+.problemText p{color: #666;font-size: 14px;padding: 6px 0;}
+.problem:last-child{margin-right: 0;}
+
+.pwdProblem h3{background: url("../../Image/customerService/pwdProblemBg.png") no-repeat center;}
+.rechargeProblem h3{background: url("../../Image/customerService/rechargeProblemBg.png") no-repeat center;}
+.accountProblem h3{background: url("../../Image/customerService/accountProblemBg.png") no-repeat center;}
+.packageProblem h3{background: url("../../Image/customerService/packageProblemBg.png") no-repeat center;}
+
+/* 咨询客服窗口 */
+.consultation{position: fixed;top: 280px;right: 110px;background: #f3f3f3;width: 140px;height: 110px;text-align: center;border-radius: 4px;}
+.consultation a{display: block;-moz-box-shadow:0 0 9px #a2a2a2; -webkit-box-shadow:0 0 9px #a2a2a2; box-shadow:0 0 9px #a2a2a2;margin-top: 9px;padding: 8px 0;}
+.consultation a img{vertical-align: middle;width: 28px;}
+.consultation a span{vertical-align: middle;color: #00C9E1;margin-left: 4px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

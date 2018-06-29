@@ -1,0 +1,143 @@
+
+<block name="body" >
+    <link rel="stylesheet" href="__CSS__/common/base.css">
+    <link rel="stylesheet" href="__CSS__/common/public.css">
+    <link rel="stylesheet" href="__CSS__/forgetPwd/index.css">
+    <link rel="stylesheet" href="__CSS__/wjmm.css">
+    <link rel="icon" href="__PUBLIC__/favicon.ico"/>
+    <!--  头部   -->
+    <include file="Public/header" />
+
+    <div class="forgetContent container">
+
+        <!-- 面包屑 -->
+        <div class="forgetCrumbs">
+            <span class="position">当前位置：</span>
+            <a href="javascript:;">登录&nbsp;&gt;</a>
+            <a href="javascript:;">找回密码</a>
+        </div>
+
+        <!-- 找回密码导向图 -->
+        <div class="forgetGuide pr">
+            <span class="forgetOne dib">1.账号信息</span>
+            <span class="forgetTwo dib">2.找回方式</span>
+            <span class="forgetThree dib">3.重置密码</span>
+            <span class="forgetFour dib">4.完成</span>
+        </div>
+
+        <!-- 文本输入款 -->
+        <div class="forgetInputBox cf">
+            <div class="forgetInputBoxLeft dib fl">
+
+                <!-- 账号信息 -->
+                <div class="inputInfo">
+                    <label class="userText" for="userAccount">用户账号：</label>
+                    <input class="userInput" type="text" id="userAccount" maxlength="20"/>
+                    <span class="remarks" id="accountRemark">
+                            <i class="star">*</i>
+                            <span class="noticeText" id="correctAccount">正确填写账号信息</span>
+                        </span>
+                    <input type="button" class="next dib" id="accountNext" value="下一步">
+                </div>
+
+                <!-- 找回密码 -->
+                <div class="backPwd hide">
+                    <div class="userNum cf">
+                        <label class="userText phone fl" for="userPwd">手机号：</label>
+                        <input class="userInput userPhone fl" type="number" id="userPwd" maxlength="20"/>
+                        <input class="sendCode fl" type="button" value="发送验证码" id="btnSendCode">
+                        <span class="remarks fl" id="phoneRemark">
+                                <i class="star">*</i>
+                                <span class="noticeText" id="bindPhone">请填写绑定的手机号码</span>
+                            </span>
+                    </div>
+                    <div class="userNum">
+                        <label class="userText" for="verificationCode">验证码：</label>
+                        <input class="userInput" type="number" id="verificationCode" maxlength="6"/>
+                        <span class="remarks" id="codeRemark">
+                                <i class="star">*</i>
+                                <span class="noticeText" id="bindSmsCode">请填写正确的验证码</span>
+                            </span>
+                    </div>
+                    <input type="button" class="next dib" value="下一步" id="smsNext">
+                </div>
+
+                <!-- 重置密码 -->
+                <div class="resetPwd hide">
+                    <div class="userNum">
+                        <label class="userText" for="resetPwd">重置密码：</label>
+                        <input class="userInput" type="text" id="resetPwd" maxlength="20"/>
+                        <span class="remarks" id="pwdRemark">
+                                <i class="star">*</i>
+                                <span class="noticeText" id="bindPwd">请填写您的密码</span>
+                            </span>
+                    </div>
+                    <div class="userNum">
+                        <label class="userText" for="confirmPwd">确认密码：</label>
+                        <input class="userInput" type="text" id="confirmPwd" maxlength="20"/>
+                        <span class="notice" id="confirmPwdRemark">
+                                <i class="star">*</i>
+                                <span class="noticeText" id="bindConfirmPwd">请再次确认密码</span>
+                            </span>
+                    </div>
+                    <input type="button" class="next dib" id="pwdNext" value="下一步">
+                </div>
+
+                <!-- 完成 -->
+                <div class="complete hide">
+                    <img src="__IMG__/forgetPwd/success.png" class="successReset fl">
+                    <span class="completeReset">恭喜您，已成功重置密码，请前往登录吧！</span>
+                </div>
+
+            </div>
+            <div class="forgetInputBoxRight dib fl">
+                <div class="explain">
+                    <p><i>*</i>请正确填写您要找回的账号信息</p>
+                    <p><i>*</i>按操作提示依次完成找回</p>
+                    <p><i>*</i>如您所有的找回方式均不可用，请联系客服</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 公共尾部 -->
+    <include file="Public/footer" />
+</body>
+<script>
+        var zqimg="__IMG__/wjmm/quanbuzhengquan.png";//图片引入路径
+        var usernameverify ="{:U('Index/wjmm')}";
+        var phoneverifyurl ="{:U('Index/phone_verify')}";        //获取当前玩家手机号
+        // var sendvcodeurl = "{:U('Index/sendvcode')}";       //获取当前玩家手机验证码
+        var verifyvcodeurl ="{:U('Index/verifyvcode')}"; //手机号手机验证码验证
+        var tosendemailurl="{:U('Index/tosendemail')}";
+        var reseturl="{:U('Index/reset')}";
+       // 用来
+        var ph="{$ph|default=1}";
+        var em="{$em|default=1}";
+        window.myemail="{$data['email']|default=1}";
+        window.myphone="{$data['phone']|default=1}";
+        var account = "{$Think.get.account}";               //获取当前玩家名称
+
+
+
+        var wjreset_url ="{:U('Index/phonemodify')}";         //密码重置
+        var wjemail_url ="{:U('Index/email_verify')}";   //查询当前玩家邮箱
+        var sendmail_url ="{:U('Index/sendTest')}";      //重置密码接口至当前玩家邮箱
+        var skip_url='__CONTROLLER__/wjemail2/email/';   //wjmail2显示玩家绑定邮箱号码
+
+
+
+        var userAccountUrl = "{:U('Index/wjmm')}"; // 验证用户账号url
+        var sendvcodeUrl = "{:U('Index/sendvcode')}"; // 验证用户账号url
+        var verifyvcodeUrl = "{:U('Index/verifyvcode')}"; // 验证用户账号url
+</script>
+<!--<script src="__JS__/jquery-1.11.1.min.js"></script>-->
+<!-- <script src="__JS__/common/jquery.js"></script>
+<script src="__JS__/common/public.js"></script> -->
+<script src="__JS__/forgetPwd/index.js"></script>
+<script src="__JS__/wjmm.js"></script>
+</html>
+</block>
+<script>
+
+</script>

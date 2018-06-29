@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/sm-extend.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/personalCenter/personal-center.css">
+</head>
+<body>
+    <div class="page-group">
+
+        <if condition="$is_login eq 0">
+            <!--  个人中心头像（未登录状态）  -->
+            <div class="headImg">
+                <img class="headPortrait" src="__PUBLIC__/Media/image/personalcenter/baseinfo/touxiang.png" alt="">
+            </div>
+            <!--   个人中心列表   -->
+            <div class="personalList">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/my-game.png" alt="">
+                                <span class="myGame">我的游戏</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/my-gifts.png" alt="">
+                                <span class="myGame">我的礼包</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/my-wallet.png" alt="">
+                                <span class="myGame">我的钱包</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="changeCenter" href="javascript:;">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/money-changer.png" alt="">
+                                <span class="myGame">兑换中心</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/bind-account.png" alt="">
+                                <span class="myGame">绑定账号</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:0755-2511-3016">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/consulting-service.png" alt="">
+                                <span class="myGame">咨询客服</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--   登录按钮（未登录状态）   -->
+            <div class="btn" style="display: none;">
+                <button type="button">登录</button>
+            </div>
+
+        <else/>
+            <!--  个人中心头像（已登录状态）  -->
+            <div class="signHeadImg">
+                <img class="signImg" src="__PUBLIC__/Media/image/personalcenter/baseinfo/touxiang.png" alt="">
+                <div class="userName">
+                    <div><span>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</span><span>{$user.nickname|default='昵称'}</span></div>
+                    <div><span>平台账号：</span><span>{$user.account}</span></div>
+                </div>
+            </div>
+            <!--   个人中心列表   -->
+            <div class="personalList">
+                <ul>
+                    <li>
+                        <a href="{:U('Member/mygame')}">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/my-game.png" alt="">
+                                <span class="myGame">我的游戏</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{:U('Member/mygifts')}">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/my-gifts.png" alt="">
+                                <span class="myGame">我的礼包</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{:U('Member/pcaccountyue')}">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/my-wallet.png" alt="">
+                                <span class="myGame">我的钱包</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="changeCenter">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/money-changer.png" alt="">
+                                <span class="myGame">兑换中心</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{:U('Member/bindphone')}">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/bind-account.png" alt="">
+                                <span class="myGame">绑定账号</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:0755-2511-3016">
+                            <div class="fl listLeft">
+                                <img class="myGameImg" src="__PUBLIC__/Mobile/images/personalCenter/consulting-service.png" alt="">
+                                <span class="myGame">咨询客服</span>
+                            </div>
+                            <div class="fr listLeft"><span class="icon icon-right"></span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--   登录按钮（已登录状态）   -->
+            <div class="btn" id="logout" >
+                <a href="javascript:;">退出登录</a>
+            </div>
+        </if>
+
+
+        <!--   底部导航栏   -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external footTap-game" href="{:U('Index/index')}">
+                <span class="icon"></span>
+                <span class="tab-label">游戏</span>
+            </a>
+            <a class="tab-item external footTap-info" href="{:U('Category/zixun')}">
+                <span class="icon"></span>
+                <span class="tab-label">资讯</span>
+            </a>
+            <a class="tab-item external footTap-center active" href="{:U('Member/personalcenter')}">
+                <span class="icon"></span>
+                <span class="tab-label">个人中心</span>
+            </a>
+            
+        </nav>
+    </div>
+
+<script src="__JS__/zepto.min.js"></script>
+<script src="__JS__/sm.min.js"></script>
+<script src="__JS__/sm-extend.min.js"></script>
+<script src="__JS__/index/index.js"></script>
+
+<script type="text/javascript">
+
+    $(document).on("click",'.changeCenter',function(){
+        $.alert("兑换中心暂未开通", function(){})
+    });
+
+    $('#logout').click(function () {
+        $.ajax({
+            type: 'POST',
+            async: true,
+            dataType: 'json',
+            url:"{:U('Member/logout')}",  
+            data:'',                 
+            success: function(data) {
+                if (data.reurl) {                            
+                    window.location.href = data.reurl;
+                } else {                            
+                    window.location.reload();
+                }
+            },
+            cache: false
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

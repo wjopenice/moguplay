@@ -1,0 +1,26 @@
+/*  头部声明的样式  */
+.page-group{background: #f4f4f4;}
+.headText{padding:.8rem .7rem;color: #333;}
+.headText .notice{text-indent: 2em;font-size: .86rem;color: #333;}
+.headText .notice span{color: #ea4141;}
+.headText .matter{text-align: right;color: #ea4141;}
+
+/* tap切换 */
+.buttons-tab{margin: 0 .7rem;}
+.buttons-tab .button.active{color: #00c9e1;border-color:#00c9e1;}
+
+/* form表单提交样式 */
+.cont{margin-bottom: 5rem;}
+.content-block{margin: .75rem 0;}
+.account{padding: .35rem 0;}
+.username{padding:.35rem 0;}
+.pwd,.code{padding: .35rem 0;}
+.inputSty{width: 100%;height: 2rem;font-size: .8rem;padding-left: .5rem;border: 1px solid #bbb;}
+.code{overflow: hidden;}
+.code .inputCode{width: 67%;}
+.code .btn-code{width: 30%;height: 2rem;border: none;background: #00c9e1;color: #fff;line-height: 2rem;}
+.btn-loginBox a{display: block;width: 100%;height: 2.3rem;margin-top: 1rem;line-height: 2.3rem;font-size: .9rem;text-align: center;color: #FFF;background: #00c9e1;border-radius: .36rem;}
+.agreementBox{font-size:.8rem;color: #CCC;margin: 1rem 0;text-align: center;}
+.agreement{color:#666;display: inline-block;margin-left: .2rem;vertical-align: middle;}
+.agreementBox.active .ChoseClick{background: url("../../images/bindPhone/click.png")no-repeat;background-size: 1rem 1rem;display: inline-block;vertical-align: middle;}
+.ChoseClick{margin:.1rem 0;width:1rem;height:1rem;background: url("../../images/bindPhone/unClick.png")no-repeat;background-size: 1rem 1rem;display: inline-block;vertical-align: middle;}

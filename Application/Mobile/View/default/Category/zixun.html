@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>资讯</title>
+    <link rel="stylesheet" href="__CSS__/sm.min.css">
+    <link rel="stylesheet" href="__CSS__/sm-extend.min.css">
+    <link rel="stylesheet" href="__CSS__/public.css">
+    <link rel="stylesheet" href="__CSS__/index/index.css">
+    <link rel="stylesheet" href="__CSS__/information/information.css">
+</head>
+<body class="mHome">
+    <div class="page-group">
+
+        <!--   导航栏   -->
+        <div class="topBar cf">
+        <div class="logoLeft fl cf"><img class="logoImg fl" src="__PUBLIC__/Mobile/images/index/logo.png"/><p class="fl">手上科技</p></div>
+        <div class="logoRight fr">
+            <if condition="$is_login eq 0">
+            <!--  未登录   -->
+            <div class="status-unLogin">
+                <a class="btn-login" href="{:U('Public/login')}">登录</a>
+                <a class="btn-register" href="{:U('Public/register')}">注册</a>
+            </div>
+            <else/>
+            <!--  已登录  -->
+            <div class="status-login cf">
+                <img class="headImg fl" src="__PUBLIC__/Media/image/personalcenter/baseinfo/touxiang.png"/>
+                <p class="headName fl">{$user_info.account}</p>
+            </div>
+            </if>
+        </div>
+    </div>
+
+        <!--  banner  -->
+        <div class="swiper-container" data-space-between='10'>
+            <div class="swiper-wrapper slide-banner_uc">
+                <volist name="carousel" id="lun" >
+                    <div class="swiper-slide">
+                        <a href={$lun.url} class="external" target="{$lun.target}" title="{$lun.title}"><img alt="" src="__ROOT__{$lun.data|get_cover='path'}" onerror="this.onerror = null; this.src ='';"></a>
+                    </div>
+                </volist> 
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-container" data-space-between='10'>
+            <div class="swiper-wrapper slide-banner_uc">
+                <div class="swiper-slide"><a href="" class="external"><img alt="" src="__PUBLIC__/Mobile/images/index/banner_1.jpg" onerror="this.onerror = null; this.src ='.__PUBLIC__/Mobile/images/personalCenter/personal-bg.png';"></a></div>
+                <div class="swiper-slide"><a href="" class="external"><img alt="" src="__PUBLIC__/Mobile/images/index/banner_2.jpg" onerror="this.onerror = null; this.src ='.__PUBLIC__/Mobile/images/personalCenter/personal-bg.png';"></a></div>
+                <div class="swiper-slide"><a href="" class="external"><img alt="" src="__PUBLIC__/Mobile/images/index/banner_3.jpg" onerror="this.onerror = null; this.src ='.__PUBLIC__/Mobile/images/personalCenter/personal-bg.png';"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+        <!-- 通告  -->
+        <div class="inform cf">
+            <div class="informIcon fl"><img src="__PUBLIC__/Mobile/images/index/inform.png"></div>
+            <article:limits name="list" category="43" child="true" limit="1">
+                 <marquee class="informInfo fl" id="informInfo">{$list.title}</marquee>
+            </article:limits>
+        </div>
+
+
+        <!--  资讯列表  -->
+        <div class="infoList">
+            <ul>
+                <volist name="zixun" id="v">
+                    <li>                                 
+                        <a href="{:U('Category/zxchildren?id='.$v['id'])}" title="{$v.title}" >
+                            <if condition="$v.category_id eq 43">
+                                <span class="infoName fl">资讯</span>
+                            <elseif condition="$v.category_id eq 44" />
+                                <span class="activeName fl">活动</span>
+                            <else />
+                                <span class="notice fl">公告</span>
+                            </if>
+                            <span class="activeTitle">{$v.title}</span>
+                            <span class="activeDate fr">{$v.create_time|date="m-d",###}</span>
+                        </a>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+
+        <!--   底部导航栏   -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external footTap-game " href="{:U('Index/index')}">
+                <span class="icon"></span>
+                <span class="tab-label">游戏</span>
+            </a>
+            <a class="tab-item external footTap-info active" href="{:U('Category/zixun')}">
+                <span class="icon"></span>
+                <span class="tab-label">资讯</span>
+            </a>
+            <a class="tab-item external footTap-center" href="{:U('Member/personalcenter')}">
+                <span class="icon"></span>
+                <span class="tab-label">个人中心</span>
+            </a>
+        </nav>
+    </div>
+
+<script src="__JS__/zepto.min.js"></script>
+<script src="__JS__/sm.min.js"></script>
+<script src="__JS__/sm-extend.min.js"></script>
+<script src="__JS__/index/index.js"></script>
+</body>
+</html>

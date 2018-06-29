@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>手上科技手机游戏运营平台_好玩的手机游戏排行榜_手机游戏免费下载</title>
+    <meta name="description" content="手上科技">
+    <link rel="shortcut icon" type="image/ico" href="../../Static/Image/common/share/favicon.ico">
+    <link rel="stylesheet" href="../../Static/Css/common/base.css">
+    <link rel="stylesheet" href="../../Static/Css/common/public.css">
+    <link rel="stylesheet" href="../../Static/Css/recharge/index.css">
+</head>
+<body>
+<!-- 公共头部 -->
+<div class="header" id="header"></div>
+
+<!-- 充值中心内容 -->
+<div class="container">
+
+    <!-- 支付宝和微信充值tap -->
+    <ul class="tapTitle cf">
+        <li class="tapAliPayLi dib fl active">
+            <i class="aliPayIcon dib"></i>
+            <span class="aliPayText">支付宝充值</span>
+        </li>
+        <li class="tapWeChatLi dib fl">
+            <i class="weChatIcon dib"></i>
+            <span class="weChatText">微信充值</span>
+        </li>
+        <li class="tapUnionPayLi dib fl">
+            <i class="unionPayIcon dib"></i>
+            <span class="unionPayText">银联充值</span>
+        </li>
+    </ul>
+
+    <!-- 充值到平台 -->
+    <div class="state"><span class="recharge">充值到</span><span class="a_org">平台币</span></div>
+
+    <!-- tapBox -->
+    <div class="tapBox">
+        <form action="">
+            <div class="tapBoxContent">
+                <!-- 支付宝充值内容 -->
+                <div class="tapBoxLi cur">
+                    <!-- 充值账号 -->
+                    <div class="common cf">
+                        <label for="rechargeAliPay" class="fl">充值账号：</label>
+                        <input type="text" class="fl" id="rechargeAliPay" maxlength="20" />
+                        <p class="remarks fl"></p>
+                        <span class="error fl"></span>
+                    </div>
+
+                    <!-- 确认账号 -->
+                    <div class="common cf">
+                        <label for="confirmAliPay" class="fl">确认账号：</label>
+                        <input type="text" id="confirmAliPay" class="fl" maxlength="20" />
+                        <p class="remarks fl"></p>
+                        <span class="error fl"></span>
+                    </div>
+
+                    <!-- 充值金额 -->
+                    <div class="rechargeMoneyBox">
+                        <div class="rechargeTit">充值金额</div>
+                        <ul class="rechargeMoneyUL cf">
+                            <li class="rechargeMoneyLi fl active">10元</li>
+                            <li class="rechargeMoneyLi fl">20元</li>
+                            <li class="rechargeMoneyLi fl">30元</li>
+                            <li class="rechargeMoneyLi fl">40元</li>
+                            <li class="rechargeMoneyLi fl">50元</li>
+                            <li class="rechargeMoneyLi fl">100元</li>
+                            <li class="rechargeMoneyLi fl">200元</li>
+                            <li class="rechargeMoneyLi fl">300元</li>
+                            <li class="rechargeMoneyLi fl">500元</li>
+                            <li class="rechargeMoneyLi fl">1000元</li>
+                            <li class="rechargeMoneyLi fl">3000元</li>
+                        </ul>
+                        <div class="otherMoney cf">
+                            <p class="otherAmount fl">其他金额：</p>
+                            <input type="text" class="fl moneyInput"/>
+                            <p class="money fl">元</p>
+                            <p class="percent fl">*&nbsp;比例：1元=1平台币=10积分 获得平台币：10  获得积分：100</p>
+                        </div>
+                    </div>
+
+                    <!--  立即充值按钮   -->
+                    <a href="javascript:;" class="btnPay zAW">立即充值</a>
+
+                    <p class="line"></p>
+
+                    <!-- 文字说明 -->
+                    <div class="aliPayTextDescription">
+                        <p class="aliPayTextDescriptionTitle">支付宝余额支付说明：</p>
+                        <p>1、您必须拥有支付宝账户。</p>
+                        <p>2、充值时请确认好您的充值金额准确无误后再充值，避免输错导致错误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</p>
+                        <p>3、在线客服咨询QQ ：2305194405&nbsp;&nbsp;&nbsp;</p>
+                        <p>4、客服电话：010-85655922&nbsp;&nbsp;&nbsp;18301467532</p>
+                    </div>
+                </div>
+
+                <!-- 微信充值内容 -->
+                <div class="tapBoxLi">
+                    <!-- 充值账号 -->
+                    <div class="common cf">
+                        <label for="rechargeWeChat" class="fl">充值账号：</label>
+                        <input type="text" class="fl" id="rechargeWeChat" maxlength="20" />
+                        <p class="remarks fl"></p>
+                        <span class="error fl"></span>
+                    </div>
+
+                    <!-- 确认账号 -->
+                    <div class="common cf">
+                        <label for="confirmWeChat" class="fl">确认账号：</label>
+                        <input type="text" id="confirmWeChat" class="fl" maxlength="20" />
+                        <p class="remarks fl"></p>
+                        <span class="error fl"></span>
+                    </div>
+
+                    <!-- 充值金额 -->
+                    <div class="rechargeMoneyBox">
+                        <div class="rechargeTit">充值金额</div>
+                        <ul class="rechargeMoneyUL cf">
+                            <li class="rechargeMoneyLi fl active">10元</li>
+                            <li class="rechargeMoneyLi fl">20元</li>
+                            <li class="rechargeMoneyLi fl">30元</li>
+                            <li class="rechargeMoneyLi fl">40元</li>
+                            <li class="rechargeMoneyLi fl">50元</li>
+                            <li class="rechargeMoneyLi fl">100元</li>
+                            <li class="rechargeMoneyLi fl">200元</li>
+                            <li class="rechargeMoneyLi fl">300元</li>
+                            <li class="rechargeMoneyLi fl">500元</li>
+                            <li class="rechargeMoneyLi fl">1000元</li>
+                            <li class="rechargeMoneyLi fl">3000元</li>
+                        </ul>
+                        <div class="otherMoney cf">
+                            <p class="otherAmount fl">其他金额：</p>
+                            <input type="text" class="fl moneyInput"/>
+                            <p class="money fl">元</p>
+                            <p class="percent fl">*&nbsp;比例：1元=1平台币=10积分 获得平台币：10  获得积分：100</p>
+                        </div>
+                    </div>
+
+                    <!--  立即充值按钮   -->
+                    <a href="javascript:;" class="btnPay zAW">立即充值</a>
+
+                    <p class="line"></p>
+
+                    <!-- 文字说明 -->
+                    <div class="weChatTextDescription">
+                        <p class="weChatTextDescriptionTitle">微信支付说明：</p>
+                        <p>1、您必须拥有微信账户。</p>
+                        <p>2、充值时请确认好您的充值金额准确无误后再充值，避免输错导致错误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</p>
+                        <p>3、在线客服咨询QQ ：2305194405&nbsp;&nbsp;&nbsp;</p>
+                        <p>4、客服电话：010-85655922&nbsp;&nbsp;&nbsp;18301467532</p>
+                    </div>
+
+                </div>
+
+                <!-- 银联充值内容 -->
+                <div class="tapBoxLi">
+                    <!-- 充值账号 -->
+                    <div class="common cf">
+                        <label for="rechargeUnionPay" class="fl">充值账号：</label>
+                        <input type="text" class="fl" id="rechargeUnionPay" maxlength="20" />
+                        <p class="remarks fl"></p>
+                        <span class="error fl"></span>
+                    </div>
+
+                    <!-- 确认账号 -->
+                    <div class="common cf">
+                        <label for="confirmUnionPay" class="fl">确认账号：</label>
+                        <input type="text" id="confirmUnionPay" class="fl" maxlength="20" />
+                        <p class="remarks fl"></p>
+                        <span class="error fl"></span>
+                    </div>
+
+                    <!-- 充值类型 -->
+                    <div class="payType rechargeMoneyUL">
+                        <p class="dib">支付类型：</p>
+                        <ul class="dib">
+                            <li class="dib active">个人网银</li>
+                            <li class="dib">企业网银</li>
+                        </ul>
+                    </div>
+
+                    <!-- 充值金额 -->
+                    <div class="rechargeMoneyBox">
+                        <div class="rechargeTit">充值金额</div>
+                        <ul class="rechargeMoneyUL cf">
+                            <li class="rechargeMoneyLi fl active">10元</li>
+                            <li class="rechargeMoneyLi fl">20元</li>
+                            <li class="rechargeMoneyLi fl">30元</li>
+                            <li class="rechargeMoneyLi fl">40元</li>
+                            <li class="rechargeMoneyLi fl">50元</li>
+                            <li class="rechargeMoneyLi fl">100元</li>
+                            <li class="rechargeMoneyLi fl">200元</li>
+                            <li class="rechargeMoneyLi fl">300元</li>
+                            <li class="rechargeMoneyLi fl">500元</li>
+                            <li class="rechargeMoneyLi fl">1000元</li>
+                            <li class="rechargeMoneyLi fl">3000元</li>
+                        </ul>
+                        <div class="otherMoney cf">
+                            <p class="otherAmount fl">其他金额：</p>
+                            <input type="text" class="fl moneyInput"/>
+                            <p class="money fl">元</p>
+                            <p class="percent fl">*&nbsp;比例：1元=1平台币=10积分 获得平台币：10  获得积分：100</p>
+                        </div>
+                    </div>
+
+                    <!--  立即充值按钮   -->
+                    <a href="javascript:;" class="btnPay union">立即充值</a>
+
+                    <!-- 文字说明 -->
+                    <p class="line"></p>
+                    <div class="weChatTextDescription">
+                        <p class="weChatTextDescriptionTitle">银联支付说明：</p>
+                        <p>1、您必须拥有银联账户。</p>
+                        <p>2、充值时请确认好您的充值金额准确无误后再充值，避免输错导致错误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</p>
+                        <p>3、在线客服咨询QQ ：2305194405&nbsp;&nbsp;&nbsp;</p>
+                        <p>4、客服电话：010-85655922&nbsp;&nbsp;&nbsp;18301467532</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- 公共尾部 -->
+<div class="footer cf" id="footer"></div>
+
+
+
+<script src="../../Static/Js/common/jquery.js"></script>
+<script src="../../Static/Js/common/jquery.ext.js"></script>
+<script src="../../Static/Js/common/public.js"></script>
+<script src="../../Static/Js/recharge/index.js"></script>
+</body>
+</html>
